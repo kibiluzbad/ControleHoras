@@ -1,0 +1,36 @@
+<p>
+  <b>Entrada:</b>
+  <%=h @lancamento.entrada.strftime('%H:%M') %>
+</p>
+
+<p>
+  <b>Saida:</b>
+  <%=h @lancamento.saida.strftime('%H:%M') %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%=h @lancamento.descricao %>
+</p>
+<p>
+	<b>Com almoço:</b>
+  	<%=h @lancamento.almoco %>
+</p>
+<p>
+  <b>Horas:</b>
+  <%=h @lancamento.horas %>
+</p>
+
+<p>
+  <b>Horas extras:</b>
+  <%=h @lancamento.horas_extras || '-' %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%=h @lancamento.data.strftime('%d/%m/%Y') %>
+</p>
+
+
+<%= link_to 'Edit', edit_lancamento_path(@lancamento) %> |
+<%= link_to 'Back', lancamentos_path %>

@@ -1,0 +1,2804 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateLancamentos (20091118124650)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "lancamentos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Horas" decimal, "HorasExtras" decimal, "Descricao" varchar(255), "Data" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091118124650')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("lancamentos")[0m
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 13:39:38) [GET]
+  [4;36;1mLancamento Load (32.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 1859ms (View: 1812, DB: 32) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-18 13:39:46) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+
+ActionView::TemplateError (undefined method `Entrada' for #<Lancamento:0x3782d34>) on line #8 of app/views/lancamentos/new.html.erb:
+5: 
+6:   <p>
+7:     <%= f.label :Entrada %><br />
+8:     <%= f.text_field :Entrada %>
+9:   </p>
+10:   <p>
+11:     <%= f.label :Saida %><br />
+
+    app/views/lancamentos/new.html.erb:8
+    app/views/lancamentos/new.html.erb:3
+    app/controllers/lancamentos_controller.rb:29:in `new'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-18 13:40:17) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+
+ActionView::TemplateError (undefined method `Entrada' for #<Lancamento:0x48687fc>) on line #8 of app/views/lancamentos/new.html.erb:
+5: 
+6:   <p>
+7:     <%= f.label :Entrada %><br />
+8:     <%= f.text_field :Entrada %>
+9:   </p>
+10:   <p>
+11:     <%= f.label :Saida %><br />
+
+    app/views/lancamentos/new.html.erb:8
+    app/views/lancamentos/new.html.erb:3
+    app/controllers/lancamentos_controller.rb:29:in `new'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateLancamentos (20091118124650)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("lancamentos")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateLancamentos (20091118124650)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "lancamentos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Entrada" time, "Saida" time, "Horas" decimal, "HorasExtras" decimal, "Descricao" varchar(255), "Data" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091118124650')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("lancamentos")[0m
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-18 13:45:29) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 610ms (View: 594, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-18 13:46:50) [GET]
+
+ActionController::RoutingError (No route matches "/lancamentos" with {:method=>:get}):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 13:48:13) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 203ms (View: 172, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-18 13:48:18) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 109ms (View: 94, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 13:49:21) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-18 13:49:24) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 13:57:00) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-18 13:57:03) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-18 14:43:52) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 203ms (View: 188, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-18 14:44:00) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-18 14:48:52) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-18 15:15:47) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 15:17:19) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 63ms (View: 0, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-18 15:17:24) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-18 15:45:30) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 141ms (View: 110, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-18 15:46:01) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"BFoYnyd/KxnflXuTvh/eHX5M8wJS6xdB47gDAsmlM0E=", "lancamento"=>{"Entrada(1i)"=>"2009", "Data(1i)"=>"2009", "Entrada(2i)"=>"11", "Data(2i)"=>"11", "Descricao"=>"Teste 1", "Entrada(3i)"=>"18", "Data(3i)"=>"18", "Entrada(4i)"=>"10", "HorasExtras"=>"", "Entrada(5i)"=>"00", "Saida(1i)"=>"2009", "Saida(2i)"=>"11", "Horas"=>"", "Saida(3i)"=>"18", "Saida(4i)"=>"19", "Saida(5i)"=>"00"}}
+  [4;35;1mLancamento Create (63.0ms)[0m   [0mINSERT INTO "lancamentos" ("updated_at", "Descricao", "Data", "HorasExtras", "Entrada", "Saida", "Horas", "created_at") VALUES('2009-11-18 17:46:01', 'Teste 1', '2009-11-18', NULL, '2009-11-18 10:00:00', '2009-11-18 19:00:00', 32400.0, '2009-11-18 17:46:01')[0m
+Redirected to http://localhost:3000/lancamentos/1
+Completed in 125ms (DB: 63) | 302 Found [http://localhost/lancamentos]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-18 15:46:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/lancamentos/1]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 15:46:20) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-18 15:47:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 219ms (View: 204, DB: 0) | 200 OK [http://localhost/lancamentos/1/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-18 15:47:11) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"BFoYnyd/KxnflXuTvh/eHX5M8wJS6xdB47gDAsmlM0E=", "id"=>"1", "lancamento"=>{"Entrada(1i)"=>"2000", "Data(1i)"=>"2009", "Entrada(2i)"=>"1", "Data(2i)"=>"11", "Descricao"=>"Teste 1", "Entrada(3i)"=>"1", "Data(3i)"=>"18", "Entrada(4i)"=>"10", "HorasExtras"=>"", "Entrada(5i)"=>"00", "Saida(1i)"=>"2000", "Saida(2i)"=>"1", "Horas"=>"32400", "Saida(3i)"=>"1", "Saida(4i)"=>"19", "Saida(5i)"=>"00"}}
+  [4;35;1mLancamento Load (15.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+  [4;36;1mLancamento Update (31.0ms)[0m   [0;1mUPDATE "lancamentos" SET "Horas" = 9.0, "updated_at" = '2009-11-18 17:47:11' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/lancamentos/1
+Completed in 94ms (DB: 46) | 302 Found [http://localhost/lancamentos/1]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-18 15:47:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/lancamentos/1]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-18 15:47:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/lancamentos/1/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-18 15:47:23) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"BFoYnyd/KxnflXuTvh/eHX5M8wJS6xdB47gDAsmlM0E=", "id"=>"1", "lancamento"=>{"Entrada(1i)"=>"2000", "Data(1i)"=>"2009", "Entrada(2i)"=>"1", "Data(2i)"=>"11", "Descricao"=>"Teste 1", "Entrada(3i)"=>"1", "Data(3i)"=>"18", "Entrada(4i)"=>"10", "HorasExtras"=>"", "Entrada(5i)"=>"10", "Saida(1i)"=>"2000", "Saida(2i)"=>"1", "Horas"=>"9", "Saida(3i)"=>"1", "Saida(4i)"=>"19", "Saida(5i)"=>"00"}}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+  [4;36;1mLancamento Update (0.0ms)[0m   [0;1mUPDATE "lancamentos" SET "Entrada" = '2000-01-01 10:10:00', "updated_at" = '2009-11-18 17:47:23' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/lancamentos/1
+Completed in 47ms (DB: 0) | 302 Found [http://localhost/lancamentos/1]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-18 15:47:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos/1]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 15:47:26) [GET]
+  [4;36;1mLancamento Load (15.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 62ms (View: 31, DB: 15) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-18 15:47:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 93ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos/1/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-18 15:48:46) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"BFoYnyd/KxnflXuTvh/eHX5M8wJS6xdB47gDAsmlM0E=", "id"=>"1", "lancamento"=>{"Entrada(1i)"=>"2000", "Data(1i)"=>"2009", "Entrada(2i)"=>"1", "Data(2i)"=>"11", "Descricao"=>"Teste 1", "Entrada(3i)"=>"1", "Data(3i)"=>"18", "Entrada(4i)"=>"10", "HorasExtras"=>"", "Entrada(5i)"=>"10", "Saida(1i)"=>"2000", "Saida(2i)"=>"1", "Horas"=>"9", "Saida(3i)"=>"1", "Saida(4i)"=>"19", "Saida(5i)"=>"00"}}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+  [4;35;1mLancamento Update (0.0ms)[0m   [0mUPDATE "lancamentos" SET "Horas" = 8.83333333333333, "updated_at" = '2009-11-18 17:48:46' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/lancamentos/1
+Completed in 94ms (DB: 0) | 302 Found [http://localhost/lancamentos/1]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-18 15:48:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos/1]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 15:48:49) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-18 15:49:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos/1/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-18 15:49:27) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"BFoYnyd/KxnflXuTvh/eHX5M8wJS6xdB47gDAsmlM0E=", "id"=>"1", "lancamento"=>{"Entrada(1i)"=>"2000", "Data(1i)"=>"2009", "Entrada(2i)"=>"1", "Data(2i)"=>"11", "Descricao"=>"Teste 1", "Entrada(3i)"=>"1", "Data(3i)"=>"18", "Entrada(4i)"=>"10", "HorasExtras"=>"", "Entrada(5i)"=>"10", "Saida(1i)"=>"2000", "Saida(2i)"=>"1", "Horas"=>"8.83333333333333", "Saida(3i)"=>"1", "Saida(4i)"=>"19", "Saida(5i)"=>"00"}}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+  [4;36;1mLancamento Update (0.0ms)[0m   [0;1mUPDATE "lancamentos" SET "Horas" = 8.83, "updated_at" = '2009-11-18 17:49:27' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/lancamentos/1
+Completed in 62ms (DB: 0) | 302 Found [http://localhost/lancamentos/1]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-18 15:49:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/lancamentos/1]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 15:49:30) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-18 15:50:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 109ms (View: 94, DB: 0) | 200 OK [http://localhost/lancamentos/1/edit]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 15:50:49) [GET]
+  [4;36;1mLancamento Load (15.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 62ms (View: 31, DB: 15) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 16:31:41) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-18 16:32:15) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-18 16:32:52) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"BFoYnyd/KxnflXuTvh/eHX5M8wJS6xdB47gDAsmlM0E=", "lancamento"=>{"Entrada(1i)"=>"2009", "Data(1i)"=>"2009", "Entrada(2i)"=>"11", "Data(2i)"=>"11", "Descricao"=>"dsadsadasd dasdsad", "Entrada(3i)"=>"17", "Data(3i)"=>"17", "Entrada(4i)"=>"10", "HorasExtras"=>"", "Entrada(5i)"=>"32", "Saida(1i)"=>"2009", "Saida(2i)"=>"11", "Horas"=>"", "Saida(3i)"=>"17", "Saida(4i)"=>"20", "Saida(5i)"=>"32"}}
+  [4;36;1mLancamento Create (0.0ms)[0m   [0;1mINSERT INTO "lancamentos" ("updated_at", "Descricao", "Data", "HorasExtras", "Entrada", "Saida", "Horas", "created_at") VALUES('2009-11-18 18:32:52', 'dsadsadasd dasdsad', '2009-11-17', NULL, '2009-11-17 10:32:00', '2009-11-17 20:32:00', 10.0, '2009-11-18 18:32:52')[0m
+Redirected to http://localhost:3000/lancamentos/2
+Completed in 94ms (DB: 0) | 302 Found [http://localhost/lancamentos]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-18 16:32:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 2) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 46ms (View: 15, DB: 0) | 200 OK [http://localhost/lancamentos/2]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 16:32:57) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 16:34:21) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 78ms (View: 46, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 16:35:23) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 16:36:22) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 172ms (View: 141, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 16:37:18) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 16:37:45) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 16:38:50) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+
+ActionView::TemplateError (undefined method `strftime' for #<ActionView::Base:0x47fa874>) on line #16 of app/views/lancamentos/index.html.erb:
+13: <% @lancamentos.each do |lancamento| %>
+14:   <tr>
+15:     <td><%=h lancamento.Entrada.strftime("%H:%M") %></td>
+16:     <td><%=h lancamento.Saida..strftime("%H:%M") %></td>
+17:     <td><%=h lancamento.Descricao %></td>
+18:     <td><%=h lancamento.Horas %></td>
+19:     <td><%=h lancamento.HorasExtras %></td>
+
+    app/views/lancamentos/index.html.erb:16
+    app/views/lancamentos/index.html.erb:13:in `each'
+    app/views/lancamentos/index.html.erb:13
+    app/controllers/lancamentos_controller.rb:7:in `index'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 16:39:10) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 16:46:47) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-18 16:47:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos/1/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-18 16:47:15) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"BFoYnyd/KxnflXuTvh/eHX5M8wJS6xdB47gDAsmlM0E=", "id"=>"1", "lancamento"=>{"Entrada(1i)"=>"2000", "Data(1i)"=>"2009", "Entrada(2i)"=>"1", "Data(2i)"=>"11", "Descricao"=>"Teste 1", "Entrada(3i)"=>"1", "Data(3i)"=>"18", "Entrada(4i)"=>"10", "HorasExtras"=>"", "Entrada(5i)"=>"00", "Saida(1i)"=>"2000", "Saida(2i)"=>"1", "Horas"=>"8.83", "Saida(3i)"=>"1", "Saida(4i)"=>"19", "Saida(5i)"=>"00"}}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+  [4;35;1mLancamento Update (0.0ms)[0m   [0mUPDATE "lancamentos" SET "Entrada" = '2000-01-01 10:00:00', "Horas" = 9.0, "updated_at" = '2009-11-18 18:47:15' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/lancamentos/1
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/lancamentos/1]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-18 16:47:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/lancamentos/1]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 16:47:18) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-18 16:47:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos/1]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 16:47:36) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 16:48:16) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-18 16:52:37) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `calcula_horas' for #<Class:0x471aad0>):
+  app/models/lancamento.rb:6
+  app/controllers/lancamentos_controller.rb:27:in `new'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (157.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 16:57:18) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-18 16:57:23) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 94ms (View: 79, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to LancamentoAdicionaTotalHoras (20091118184222)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091118184222')[0m
+Migrating to CreateLancamentos (20091118191241)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "lancamentos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "entrada" time, "saida" time, "descricao" varchar(255), "horas" decimal, "horas_extras" decimal, "data" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091118191241')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("lancamentos")[0m
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 17:21:38) [GET]
+
+SyntaxError (C:/Documents and Settings/leonardo.cardoso/work/ControleHoras/app/models/lancamento.rb:10: syntax error, unexpected '{', expecting kTHEN or ':' or '\n' or ';'
+C:/Documents and Settings/leonardo.cardoso/work/ControleHoras/app/models/lancamento.rb:13: syntax error, unexpected '}', expecting kEND):
+  app/controllers/lancamentos_controller.rb:5:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 17:22:21) [GET]
+
+SyntaxError (C:/Documents and Settings/leonardo.cardoso/work/ControleHoras/app/models/lancamento.rb:10: syntax error, unexpected '{', expecting kTHEN or ':' or '\n' or ';'
+C:/Documents and Settings/leonardo.cardoso/work/ControleHoras/app/models/lancamento.rb:13: syntax error, unexpected '}', expecting kEND):
+  app/controllers/lancamentos_controller.rb:5:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 17:22:25) [GET]
+
+SyntaxError (C:/Documents and Settings/leonardo.cardoso/work/ControleHoras/app/models/lancamento.rb:10: syntax error, unexpected '{', expecting kTHEN or ':' or '\n' or ';'
+C:/Documents and Settings/leonardo.cardoso/work/ControleHoras/app/models/lancamento.rb:13: syntax error, unexpected '}', expecting kEND):
+  app/controllers/lancamentos_controller.rb:5:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 17:22:26) [GET]
+
+SyntaxError (C:/Documents and Settings/leonardo.cardoso/work/ControleHoras/app/models/lancamento.rb:10: syntax error, unexpected '{', expecting kTHEN or ':' or '\n' or ';'
+C:/Documents and Settings/leonardo.cardoso/work/ControleHoras/app/models/lancamento.rb:13: syntax error, unexpected '}', expecting kEND):
+  app/controllers/lancamentos_controller.rb:5:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (234.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 17:22:30) [GET]
+
+SyntaxError (C:/Documents and Settings/leonardo.cardoso/work/ControleHoras/app/models/lancamento.rb:10: syntax error, unexpected '{', expecting kTHEN or ':' or '\n' or ';'
+C:/Documents and Settings/leonardo.cardoso/work/ControleHoras/app/models/lancamento.rb:13: syntax error, unexpected '}', expecting kEND):
+  app/controllers/lancamentos_controller.rb:5:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (79.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 17:22:44) [GET]
+
+SyntaxError (C:/Documents and Settings/leonardo.cardoso/work/ControleHoras/app/models/lancamento.rb:10: syntax error, unexpected '{', expecting kTHEN or ':' or '\n' or ';'
+C:/Documents and Settings/leonardo.cardoso/work/ControleHoras/app/models/lancamento.rb:13: syntax error, unexpected '}', expecting kEND):
+  app/controllers/lancamentos_controller.rb:5:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (187.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 17:23:14) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 93ms (View: 62, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-18 17:23:17) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-18 17:23:50) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"BFoYnyd/KxnflXuTvh/eHX5M8wJS6xdB47gDAsmlM0E=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "saida(3i)"=>"18", "saida(4i)"=>"20", "entrada(1i)"=>"2009", "horas_extras"=>"", "saida(5i)"=>"23", "entrada(2i)"=>"11", "entrada(3i)"=>"18", "entrada(4i)"=>"10", "entrada(5i)"=>"23", "descricao"=>"", "data(3i)"=>"18"}}
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-18 17:24:09) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"BFoYnyd/KxnflXuTvh/eHX5M8wJS6xdB47gDAsmlM0E=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "saida(3i)"=>"18", "saida(4i)"=>"20", "entrada(1i)"=>"2009", "horas_extras"=>"", "saida(5i)"=>"23", "entrada(2i)"=>"11", "entrada(3i)"=>"18", "entrada(4i)"=>"10", "entrada(5i)"=>"23", "descricao"=>"testes testes", "data(3i)"=>"18"}}
+  [4;35;1mLancamento Create (0.0ms)[0m   [0mINSERT INTO "lancamentos" ("horas", "updated_at", "saida", "entrada", "horas_extras", "descricao", "data", "created_at") VALUES(NULL, '2009-11-18 19:24:09', '2009-11-18 20:23:00', '2009-11-18 10:23:00', NULL, 'testes testes', '2009-11-18', '2009-11-18 19:24:09')[0m
+Redirected to http://localhost:3000/lancamentos/1
+Completed in 63ms (DB: 0) | 302 Found [http://localhost/lancamentos]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-18 17:24:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/lancamentos/1]
+  [4;36;1mLancamento Create (0.0ms)[0m   [0;1mINSERT INTO "lancamentos" ("horas", "updated_at", "saida", "entrada", "horas_extras", "descricao", "data", "created_at") VALUES(8.0, '2009-11-18 19:35:33', '2000-01-01 23:00:00', '2000-01-01 10:00:00', 0.0, 'testes', '2009-11-18', '2009-11-18 19:35:33')[0m
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 17:36:17) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos]
+  [4;35;1mSQL (16.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mLancamento Create (0.0ms)[0m   [0;1mINSERT INTO "lancamentos" ("horas", "updated_at", "saida", "entrada", "horas_extras", "descricao", "data", "created_at") VALUES(8.0, '2009-11-18 19:43:43', '2000-01-01 23:00:00', '2000-01-01 10:00:00', 4.0, 'testes', '2009-11-18', '2009-11-18 19:43:43')[0m
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 17:46:23) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#destroy (for 127.0.0.1 at 2009-11-18 17:46:28) [DELETE]
+  Parameters: {"authenticity_token"=>"BFoYnyd/KxnflXuTvh/eHX5M8wJS6xdB47gDAsmlM0E=", "id"=>"2"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 2) [0m
+  [4;36;1mLancamento Destroy (0.0ms)[0m   [0;1mDELETE FROM "lancamentos" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/lancamentos
+Completed in 78ms (DB: 0) | 302 Found [http://localhost/lancamentos/2]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 17:46:28) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#destroy (for 127.0.0.1 at 2009-11-18 17:46:32) [DELETE]
+  Parameters: {"authenticity_token"=>"BFoYnyd/KxnflXuTvh/eHX5M8wJS6xdB47gDAsmlM0E=", "id"=>"1"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 1) [0m
+  [4;35;1mLancamento Destroy (0.0ms)[0m   [0mDELETE FROM "lancamentos" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/lancamentos
+Completed in 94ms (DB: 0) | 302 Found [http://localhost/lancamentos/1]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 17:46:32) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-18 17:46:34) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 203ms (View: 187, DB: 0) | 200 OK [http://localhost/lancamentos/3/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-18 17:46:52) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"BFoYnyd/KxnflXuTvh/eHX5M8wJS6xdB47gDAsmlM0E=", "id"=>"3", "lancamento"=>{"horas"=>"8", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"19", "entrada(1i)"=>"2000", "horas_extras"=>"4", "saida(5i)"=>"32", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"10", "entrada(5i)"=>"00", "descricao"=>"testes", "data(3i)"=>"18"}}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+  [4;35;1mLancamento Update (0.0ms)[0m   [0mUPDATE "lancamentos" SET "saida" = '2000-01-01 19:32:00', "horas_extras" = 0.53, "updated_at" = '2009-11-18 19:46:52' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/lancamentos/3
+Completed in 62ms (DB: 0) | 302 Found [http://localhost/lancamentos/3]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-18 17:46:52) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos/3]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 17:46:57) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 17:49:01) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 17:49:06) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 17:49:07) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 17:49:07) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 17:50:29) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 141ms (View: 125, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 17:51:25) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to LancamentoAdicionaTotalHoras (20091118184222)
+Migrating to CreateLancamentos (20091118191241)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("lancamentos")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateLancamentos (20091118191241)
+Migrating to LancamentoAdicionaTotalHoras (20091118194222)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "lancamentos" ADD "total" decimal[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091118194222')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("lancamentos")[0m
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 18:04:43) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 79ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 18:06:09) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-18 18:06:12) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 110ms (View: 79, DB: 0) | 200 OK [http://localhost/lancamentos/3/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-18 18:06:15) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"BFoYnyd/KxnflXuTvh/eHX5M8wJS6xdB47gDAsmlM0E=", "id"=>"3", "lancamento"=>{"horas"=>"8", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"19", "entrada(1i)"=>"2000", "horas_extras"=>"0.53", "saida(5i)"=>"32", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"10", "entrada(5i)"=>"00", "descricao"=>"testes", "data(3i)"=>"18"}}
+  [4;35;1mLancamento Load (15.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+  [4;36;1mLancamento Update (0.0ms)[0m   [0;1mUPDATE "lancamentos" SET "total" = 9.53, "updated_at" = '2009-11-18 20:06:15' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/lancamentos/3
+Completed in 94ms (DB: 15) | 302 Found [http://localhost/lancamentos/3]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-18 18:06:15) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/lancamentos/3]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 18:06:17) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 18:07:04) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-18 18:07:07) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 78ms (View: 46, DB: 0) | 200 OK [http://localhost/lancamentos/3/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-18 18:07:10) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"BFoYnyd/KxnflXuTvh/eHX5M8wJS6xdB47gDAsmlM0E=", "id"=>"3", "lancamento"=>{"horas"=>"8", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"19", "entrada(1i)"=>"2000", "horas_extras"=>"0.53", "saida(5i)"=>"32", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"10", "entrada(5i)"=>"00", "descricao"=>"testes", "data(3i)"=>"18"}}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+  [4;36;1mLancamento Update (0.0ms)[0m   [0;1mUPDATE "lancamentos" SET "total" = 8.53, "updated_at" = '2009-11-18 20:07:10' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/lancamentos/3
+Completed in 94ms (DB: 0) | 302 Found [http://localhost/lancamentos/3]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-18 18:07:10) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos/3]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-18 18:07:11) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index to xml (for 127.0.0.1 at 2009-11-18 18:07:29) [GET]
+  [4;35;1mLancamento Load (16.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Completed in 47ms (View: 15, DB: 16) | 200 OK [http://localhost/lancamentos.xml]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-19 14:22:23) [GET]
+  [4;36;1mLancamento Load (46.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 1937ms (View: 1844, DB: 46) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-19 14:22:28) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 250ms (View: 219, DB: 0) | 200 OK [http://localhost/lancamentos/3/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-19 14:23:13) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"CNVJ5okCQHBO2KkJYkp5KrdO1iGgKBJHwMt1MOh0klo=", "id"=>"3", "lancamento"=>{"horas"=>"8", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"23", "entrada(1i)"=>"2000", "horas_extras"=>"0.53", "saida(5i)"=>"00", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"10", "entrada(5i)"=>"00", "descricao"=>"testes", "data(3i)"=>"18"}}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+  [4;35;1mLancamento Update (0.0ms)[0m   [0mUPDATE "lancamentos" SET "total" = 12.0, "saida" = '2000-01-01 23:00:00', "horas_extras" = 4.0, "updated_at" = '2009-11-19 16:23:13' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/lancamentos/3
+Completed in 63ms (DB: 0) | 302 Found [http://localhost/lancamentos/3]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-19 14:23:13) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/lancamentos/3]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-19 14:23:18) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-19 14:23:22) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 797ms (View: 781, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-19 14:23:46) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"CNVJ5okCQHBO2KkJYkp5KrdO1iGgKBJHwMt1MOh0klo=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "saida(3i)"=>"19", "saida(4i)"=>"20", "entrada(1i)"=>"2009", "horas_extras"=>"", "saida(5i)"=>"00", "entrada(2i)"=>"11", "entrada(3i)"=>"19", "entrada(4i)"=>"11", "entrada(5i)"=>"00", "descricao"=>"teste", "data(3i)"=>"19"}}
+  [4;36;1mLancamento Create (0.0ms)[0m   [0;1mINSERT INTO "lancamentos" ("horas", "updated_at", "saida", "total", "entrada", "horas_extras", "descricao", "data", "created_at") VALUES(8.0, '2009-11-19 16:23:46', '2009-11-19 20:00:00', 8.0, '2009-11-19 11:00:00', NULL, 'teste', '2009-11-19', '2009-11-19 16:23:46')[0m
+Redirected to http://localhost:3000/lancamentos/4
+Completed in 78ms (DB: 0) | 302 Found [http://localhost/lancamentos]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-19 14:23:46) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 4) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/lancamentos/4]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-19 14:23:48) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-19 14:46:00) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mLancamento Load (15.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 47ms (View: 16, DB: 15) | 200 OK [http://localhost/lancamentos/3]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-19 14:46:07) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 79ms (View: 63, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:29:34) [GET]
+  [4;36;1mLancamento Load (32.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 1812ms (View: 1765, DB: 32) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-23 10:29:41) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 734ms (View: 718, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-23 10:30:30) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"zuz7rF7348HBM9YJ38qF4LXBj8k3AQh6pevlxlO1k1Y=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "saida(3i)"=>"23", "saida(4i)"=>"19", "entrada(1i)"=>"2009", "horas_extras"=>"", "saida(5i)"=>"10", "entrada(2i)"=>"11", "entrada(3i)"=>"23", "entrada(4i)"=>"10", "entrada(5i)"=>"10", "descricao"=>"Desenvolvimento PR - Carrefour", "data(3i)"=>"23"}}
+  [4;35;1mLancamento Create (16.0ms)[0m   [0mINSERT INTO "lancamentos" ("horas", "updated_at", "saida", "total", "entrada", "horas_extras", "descricao", "data", "created_at") VALUES(8.0, '2009-11-23 12:30:30', '2009-11-23 19:10:00', 8.0, '2009-11-23 10:10:00', NULL, 'Desenvolvimento PR - Carrefour', '2009-11-23', '2009-11-23 12:30:30')[0m
+Redirected to http://localhost:3000/lancamentos/5
+Completed in 47ms (DB: 16) | 302 Found [http://localhost/lancamentos]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 10:30:30) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:30:37) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-23 10:31:29) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 172ms (View: 156, DB: 0) | 200 OK [http://localhost/lancamentos/5/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-23 10:31:32) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"zuz7rF7348HBM9YJ38qF4LXBj8k3AQh6pevlxlO1k1Y=", "id"=>"5", "lancamento"=>{"horas"=>"8", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"19", "entrada(1i)"=>"2000", "horas_extras"=>"", "saida(5i)"=>"10", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"10", "entrada(5i)"=>"10", "descricao"=>"Desenvolvimento PR - Carrefour", "data(3i)"=>"23"}}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Redirected to http://localhost:3000/lancamentos/5
+Completed in 47ms (DB: 0) | 302 Found [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 10:31:32) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-23 10:31:34) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 109ms (View: 94, DB: 0) | 200 OK [http://localhost/lancamentos/5/edit]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:31:37) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-23 10:31:39) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://localhost/lancamentos/5/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-23 10:31:45) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"zuz7rF7348HBM9YJ38qF4LXBj8k3AQh6pevlxlO1k1Y=", "id"=>"5", "lancamento"=>{"horas"=>"8", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"20", "entrada(1i)"=>"2000", "horas_extras"=>"", "saida(5i)"=>"10", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"10", "entrada(5i)"=>"10", "descricao"=>"Desenvolvimento PR - Carrefour", "data(3i)"=>"23"}}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+  [4;35;1mLancamento Update (0.0ms)[0m   [0mUPDATE "lancamentos" SET "total" = 9.0, "saida" = '2000-01-01 20:10:00', "horas_extras" = 1.0, "updated_at" = '2009-11-23 12:31:45' WHERE "id" = 5[0m
+Redirected to http://localhost:3000/lancamentos/5
+Completed in 62ms (DB: 0) | 302 Found [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 10:31:45) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:31:48) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-23 10:31:55) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 93ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos/5/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-23 10:32:08) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"zuz7rF7348HBM9YJ38qF4LXBj8k3AQh6pevlxlO1k1Y=", "id"=>"5", "lancamento"=>{"horas"=>"8", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"19", "entrada(1i)"=>"2000", "horas_extras"=>"1", "saida(5i)"=>"10", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"10", "entrada(5i)"=>"10", "descricao"=>"Desenvolvimento PR - Carrefour", "data(3i)"=>"23"}}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+  [4;36;1mLancamento Update (0.0ms)[0m   [0;1mUPDATE "lancamentos" SET "total" = 8.0, "saida" = '2000-01-01 19:10:00', "updated_at" = '2009-11-23 12:32:08' WHERE "id" = 5[0m
+Redirected to http://localhost:3000/lancamentos/5
+Completed in 250ms (DB: 0) | 302 Found [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 10:32:08) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:32:13) [GET]
+  [4;36;1mLancamento Load (15.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 94ms (View: 63, DB: 15) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-23 10:32:54) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 125ms (View: 93, DB: 0) | 200 OK [http://localhost/lancamentos/5/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-23 10:32:57) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"zuz7rF7348HBM9YJ38qF4LXBj8k3AQh6pevlxlO1k1Y=", "id"=>"5", "lancamento"=>{"horas"=>"8", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"19", "entrada(1i)"=>"2000", "horas_extras"=>"1", "saida(5i)"=>"10", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"10", "entrada(5i)"=>"10", "descricao"=>"Desenvolvimento PR - Carrefour", "data(3i)"=>"23"}}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+  [4;35;1mLancamento Update (0.0ms)[0m   [0mUPDATE "lancamentos" SET "horas_extras" = NULL, "updated_at" = '2009-11-23 12:32:57' WHERE "id" = 5[0m
+Redirected to http://localhost:3000/lancamentos/5
+Completed in 47ms (DB: 0) | 302 Found [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 10:32:57) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:32:59) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-23 10:33:35) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 4) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 93ms (View: 62, DB: 0) | 200 OK [http://localhost/lancamentos/4/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-23 10:33:45) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"zuz7rF7348HBM9YJ38qF4LXBj8k3AQh6pevlxlO1k1Y=", "id"=>"4", "lancamento"=>{"horas"=>"8", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"23", "entrada(1i)"=>"2000", "horas_extras"=>"", "saida(5i)"=>"00", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"11", "entrada(5i)"=>"00", "descricao"=>"teste", "data(3i)"=>"19"}}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 4) [0m
+  [4;36;1mLancamento Update (16.0ms)[0m   [0;1mUPDATE "lancamentos" SET "total" = 11.0, "saida" = '2000-01-01 23:00:00', "horas_extras" = 3.0, "updated_at" = '2009-11-23 12:33:45' WHERE "id" = 4[0m
+Redirected to http://localhost:3000/lancamentos/4
+Completed in 47ms (DB: 16) | 302 Found [http://localhost/lancamentos/4]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 10:33:45) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 4) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 157ms (View: 0, DB: 0) | 200 OK [http://localhost/lancamentos/4]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:33:47) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-23 10:33:59) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 4) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos/4/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-23 10:34:04) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"zuz7rF7348HBM9YJ38qF4LXBj8k3AQh6pevlxlO1k1Y=", "id"=>"4", "lancamento"=>{"horas"=>"8", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"23", "entrada(1i)"=>"2000", "horas_extras"=>"3", "saida(5i)"=>"00", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"11", "entrada(5i)"=>"00", "descricao"=>"Desenvolvimento PR - Carrefour", "data(3i)"=>"19"}}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 4) [0m
+  [4;35;1mLancamento Update (16.0ms)[0m   [0mUPDATE "lancamentos" SET "descricao" = 'Desenvolvimento PR - Carrefour', "updated_at" = '2009-11-23 12:34:04' WHERE "id" = 4[0m
+Redirected to http://localhost:3000/lancamentos/4
+Completed in 47ms (DB: 16) | 302 Found [http://localhost/lancamentos/4]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 10:34:04) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 4) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/lancamentos/4]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:34:06) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-23 10:34:10) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 109ms (View: 94, DB: 0) | 200 OK [http://localhost/lancamentos/3/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-23 10:34:14) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"zuz7rF7348HBM9YJ38qF4LXBj8k3AQh6pevlxlO1k1Y=", "id"=>"3", "lancamento"=>{"horas"=>"8", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"23", "entrada(1i)"=>"2000", "horas_extras"=>"4", "saida(5i)"=>"00", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"10", "entrada(5i)"=>"00", "descricao"=>"Desenvolvimento PR - Carrefour", "data(3i)"=>"18"}}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+  [4;36;1mLancamento Update (16.0ms)[0m   [0;1mUPDATE "lancamentos" SET "descricao" = 'Desenvolvimento PR - Carrefour', "updated_at" = '2009-11-23 12:34:14' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/lancamentos/3
+Completed in 109ms (DB: 16) | 302 Found [http://localhost/lancamentos/3]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 10:34:14) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos/3]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:34:17) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 32ms (View: 32, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:39:36) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:40:26) [GET]
+  [4;36;1mLancamento Load (16.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 94ms (View: 62, DB: 16) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index to xml (for 127.0.0.1 at 2009-11-23 10:41:11) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos.xml]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:41:50) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:43:13) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:49:40) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 157ms (View: 32, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:50:42) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:51:49) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 93ms (View: 62, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:52:54) [GET]
+  [4;35;1mLancamento Load (16.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 94ms (View: 62, DB: 16) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:53:18) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 109ms (View: 94, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:54:05) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:55:25) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:55:53) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 109ms (View: 93, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:57:09) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.round) on line #23 of app/views/lancamentos/index.html.erb:
+20:     <td class="centralizado"><%=h lancamento.saida.strftime('%H:%M') %></td>
+21:     <td class="texto"><%=h lancamento.descricao %></td>
+22:     <td class="numero"><%=h lancamento.horas.round(2) %></td>
+23:     <td class="numero"><%=h lancamento.horas_extras.round(2) %></td>
+24:     <td class="numero"><%=h lancamento.total.round(2) %></td>
+25:     <td><%= link_to 'Exibir', lancamento %></td>
+26:     <td><%= link_to 'Editar', edit_lancamento_path(lancamento) %></td>
+
+    app/views/lancamentos/index.html.erb:23
+    app/views/lancamentos/index.html.erb:15:in `each'
+    app/views/lancamentos/index.html.erb:15
+    app/controllers/lancamentos_controller.rb:7:in `index'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:57:42) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 10:57:54) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 187ms (View: 172, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 13:51:29) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 1594ms (View: 1594, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 14:42:34) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+
+NameError (uninitialized constant Mime::XLS):
+  app/controllers/lancamentos_controller.rb:10:in `index'
+  app/controllers/lancamentos_controller.rb:7:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 14:44:22) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+
+NameError (uninitialized constant Mime::XLS):
+  app/controllers/lancamentos_controller.rb:9:in `index'
+  app/controllers/lancamentos_controller.rb:7:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (110.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 14:44:24) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+
+NameError (uninitialized constant Mime::XLS):
+  app/controllers/lancamentos_controller.rb:9:in `index'
+  app/controllers/lancamentos_controller.rb:7:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 14:44:24) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+
+NameError (uninitialized constant Mime::XLS):
+  app/controllers/lancamentos_controller.rb:9:in `index'
+  app/controllers/lancamentos_controller.rb:7:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 14:44:24) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+
+NameError (uninitialized constant Mime::XLS):
+  app/controllers/lancamentos_controller.rb:9:in `index'
+  app/controllers/lancamentos_controller.rb:7:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 14:44:24) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+
+NameError (uninitialized constant Mime::XLS):
+  app/controllers/lancamentos_controller.rb:9:in `index'
+  app/controllers/lancamentos_controller.rb:7:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 14:44:25) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+
+NameError (uninitialized constant Mime::XLS):
+  app/controllers/lancamentos_controller.rb:9:in `index'
+  app/controllers/lancamentos_controller.rb:7:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (187.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 14:44:25) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+
+NameError (uninitialized constant Mime::XLS):
+  app/controllers/lancamentos_controller.rb:9:in `index'
+  app/controllers/lancamentos_controller.rb:7:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 14:45:01) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 78ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index to xls (for 127.0.0.1 at 2009-11-23 14:45:09) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+
+ActionView::MissingTemplate (Missing template lancamentos/index.erb in view path app/views):
+  app/controllers/lancamentos_controller.rb:7:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 14:55:32) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 125ms (View: 31, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index to xls (for 127.0.0.1 at 2009-11-23 14:55:36) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Completed in 546ms (View: 531, DB: 0) | 200 OK [http://localhost/lancamentos.xls]
+
+
+Processing LancamentosController#index to xls (for 127.0.0.1 at 2009-11-23 14:56:40) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos.xls]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 14:57:57) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index to xls (for 127.0.0.1 at 2009-11-23 14:58:06) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos.xls]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 14:58:50) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index to xls (for 127.0.0.1 at 2009-11-23 14:58:55) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+
+ActionView::MissingTemplate (Missing template lancamentos/index.erb in view path app/views):
+  app/controllers/lancamentos_controller.rb:9:in `index'
+  app/controllers/lancamentos_controller.rb:7:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index to xls (for 127.0.0.1 at 2009-11-23 14:59:02) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+
+ActionView::MissingTemplate (Missing template lancamentos/index.erb in view path app/views):
+  app/controllers/lancamentos_controller.rb:9:in `index'
+  app/controllers/lancamentos_controller.rb:7:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index to xls (for 127.0.0.1 at 2009-11-23 14:59:18) [GET]
+
+SyntaxError (C:/Documents and Settings/leonardo.cardoso/work/ControleHoras/app/controllers/lancamentos_controller.rb:9: syntax error, unexpected tASSOC, expecting '}'
+      format.xls { render => @lancamentos }
+                            ^):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index to xls (for 127.0.0.1 at 2009-11-23 15:00:07) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+
+ActionView::MissingTemplate (Missing template lancamentos/index.erb in view path app/views):
+  app/controllers/lancamentos_controller.rb:7:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index to xls (for 127.0.0.1 at 2009-11-23 15:09:11) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering lancamentos/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/lancamentos.xls]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 15:12:45) [GET]
+  [4;36;1mLancamento Load (15.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 62ms (View: 31, DB: 15) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index to xls (for 127.0.0.1 at 2009-11-23 15:12:59) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering lancamentos/index
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos.xls]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 17:22:05) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 313ms (View: 297, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index to xls (for 127.0.0.1 at 2009-11-23 17:22:14) [GET]
+  [4;35;1mLancamento Load (16.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+
+NoMethodError (undefined method `to_csv' for #<Array:0x35eb14c>):
+  app/controllers/lancamentos_controller.rb:9:in `index'
+  app/controllers/lancamentos_controller.rb:7:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (157.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index to xls (for 127.0.0.1 at 2009-11-23 17:25:20) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+
+NoMethodError (undefined method `to_csv' for #<Array:0x38fd9ac>):
+  app/controllers/lancamentos_controller.rb:9:in `index'
+  app/controllers/lancamentos_controller.rb:7:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index to xls (for 127.0.0.1 at 2009-11-23 17:25:24) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+
+NoMethodError (undefined method `to_csv' for #<Array:0x34b3798>):
+  app/controllers/lancamentos_controller.rb:9:in `index'
+  app/controllers/lancamentos_controller.rb:7:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 17:26:34) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 78ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index to xls (for 127.0.0.1 at 2009-11-23 17:26:40) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Sending data 
+Completed in 359ms (View: 0, DB: 0) | 200 OK [http://localhost/lancamentos.xls]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 17:28:14) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index to xls (for 127.0.0.1 at 2009-11-23 17:28:20) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+Rendering lancamentos/index
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos.xls]
+
+
+Processing LancamentosController#index to xls (for 127.0.0.1 at 2009-11-23 17:34:05) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+Rendering lancamentos/index
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/lancamentos.xls]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 18:34:42) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+
+NameError (undefined local variable or method `lancamentos' for #<LancamentosController:0x47504a0>):
+  app/controllers/lancamentos_controller.rb:6:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 18:35:13) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" [0m
+
+NoMethodError (undefined method `sort_by_data' for #<Array:0x48c76f8>):
+  app/controllers/lancamentos_controller.rb:6:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 18:35:31) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" [0m
+
+NoMethodError (undefined method `order_by_data' for #<Array:0x48076b4>):
+  app/controllers/lancamentos_controller.rb:6:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (219.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 18:42:10) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 1437ms (View: 1422, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 18:42:41) [GET]
+  [4;35;1mLancamento Load (16.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY total[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 93ms (View: 62, DB: 16) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 18:43:07) [GET]
+  [4;36;1mLancamento Load (16.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 94ms (View: 63, DB: 16) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-23 18:43:38) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-23 18:44:17) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"/PMvWBPefhaiHFlfJmv0QOjnYjTnZVfq2OO3XjSwgPM=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "saida(3i)"=>"23", "saida(4i)"=>"16", "entrada(1i)"=>"2009", "horas_extras"=>"", "saida(5i)"=>"00", "entrada(2i)"=>"11", "entrada(3i)"=>"23", "entrada(4i)"=>"14", "entrada(5i)"=>"00", "descricao"=>"xxx", "data(3i)"=>"20"}}
+  [4;35;1mLancamento Create (16.0ms)[0m   [0mINSERT INTO "lancamentos" ("horas", "updated_at", "saida", "total", "entrada", "horas_extras", "descricao", "data", "created_at") VALUES(1.0, '2009-11-23 20:44:17', '2009-11-23 16:00:00', 1.0, '2009-11-23 14:00:00', NULL, 'xxx', '2009-11-20', '2009-11-23 20:44:17')[0m
+Redirected to http://localhost:3000/lancamentos/6
+Completed in 47ms (DB: 16) | 302 Found [http://localhost/lancamentos]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 18:44:17) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 6) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos/6]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 18:44:19) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-23 18:44:31) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 109ms (View: 93, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 18:44:38) [GET]
+  [4;36;1mLancamento Load (16.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 109ms (View: 78, DB: 16) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-23 18:44:44) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 6) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/lancamentos/6/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-23 18:44:48) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"/PMvWBPefhaiHFlfJmv0QOjnYjTnZVfq2OO3XjSwgPM=", "id"=>"6", "lancamento"=>{"horas"=>"1", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"16", "entrada(1i)"=>"2000", "horas_extras"=>"", "saida(5i)"=>"00", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"14", "entrada(5i)"=>"00", "descricao"=>"Desenvolvimento PR - Carrefour", "data(3i)"=>"20"}}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 6) [0m
+  [4;35;1mLancamento Update (0.0ms)[0m   [0mUPDATE "lancamentos" SET "descricao" = 'Desenvolvimento PR - Carrefour', "updated_at" = '2009-11-23 20:44:48' WHERE "id" = 6[0m
+Redirected to http://localhost:3000/lancamentos/6
+Completed in 63ms (DB: 0) | 302 Found [http://localhost/lancamentos/6]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 18:44:48) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 6) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/lancamentos/6]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 18:44:51) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 141ms (View: 110, DB: 0) | 200 OK [http://localhost/lancamentos]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateLancamentos (20091118191241)
+Migrating to LancamentoAdicionaTotalHoras (20091118194222)
+Migrating to LancamentoAdicionaAlmoco (20091123204701)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "lancamentos" ADD "almoco" boolean[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091123204701')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("lancamentos")[0m
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-23 18:53:34) [GET]
+
+SyntaxError (C:/Documents and Settings/leonardo.cardoso/work/ControleHoras/app/models/lancamento.rb:22: syntax error, unexpected $end, expecting kEND):
+  app/controllers/lancamentos_controller.rb:28:in `new'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-23 18:53:52) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+
+ActionView::TemplateError (undefined method `checkbox' for #<ActionView::Helpers::FormBuilder:0x4860660>) on line #19 of app/views/lancamentos/new.html.erb:
+16:     <%= f.text_field :descricao %>
+17:   </p>
+18:   <p><%= f.label :com_almoco %><br />
+19:   	<%= f.checkbox :almoco %>
+20:   <p>
+21:     <%= f.label :horas %><br />
+22:     <%= f.text_field :horas %>
+
+    app/views/lancamentos/new.html.erb:19
+    app/views/lancamentos/new.html.erb:3
+    app/controllers/lancamentos_controller.rb:30:in `new'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-23 18:59:13) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 18:59:25) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-23 18:59:30) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mLancamento Load (15.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 6) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 141ms (View: 110, DB: 15) | 200 OK [http://localhost/lancamentos/6/edit]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 19:01:07) [GET]
+  [4;36;1mLancamento Load (15.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 46ms (View: 31, DB: 15) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-23 19:01:14) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 6) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://localhost/lancamentos/6/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-23 19:01:26) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"7yYGoWOmfCv84VES2hE45DdIfOk27t5cphp/S2XUhUc=", "id"=>"6", "lancamento"=>{"horas"=>"1", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "almoco"=>"0", "saida(3i)"=>"1", "saida(4i)"=>"15", "entrada(1i)"=>"2000", "horas_extras"=>"", "saida(5i)"=>"00", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"14", "entrada(5i)"=>"00", "descricao"=>"Desenvolvimento PR - Carrefour", "data(3i)"=>"20"}}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 6) [0m
+  [4;35;1mLancamento Update (0.0ms)[0m   [0mUPDATE "lancamentos" SET "saida" = '2000-01-01 15:00:00', "almoco" = 'f', "updated_at" = '2009-11-23 21:01:26' WHERE "id" = 6[0m
+Redirected to http://localhost:3000/lancamentos/6
+Completed in 93ms (DB: 0) | 302 Found [http://localhost/lancamentos/6]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 19:01:26) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 6) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/lancamentos/6]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 19:01:29) [GET]
+  [4;35;1mLancamento Load (15.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 109ms (View: 78, DB: 15) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-23 19:01:32) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 93ms (View: 62, DB: 0) | 200 OK [http://localhost/lancamentos/5/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-23 19:01:36) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"7yYGoWOmfCv84VES2hE45DdIfOk27t5cphp/S2XUhUc=", "id"=>"5", "lancamento"=>{"horas"=>"8", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "almoco"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"19", "entrada(1i)"=>"2000", "horas_extras"=>"", "saida(5i)"=>"10", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"10", "entrada(5i)"=>"10", "descricao"=>"Desenvolvimento PR - Carrefour", "data(3i)"=>"23"}}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+  [4;36;1mLancamento Update (0.0ms)[0m   [0;1mUPDATE "lancamentos" SET "almoco" = 't', "updated_at" = '2009-11-23 21:01:36' WHERE "id" = 5[0m
+Redirected to http://localhost:3000/lancamentos/5
+Completed in 78ms (DB: 0) | 302 Found [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 19:01:36) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 19:01:39) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-23 19:01:42) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 4) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 125ms (View: 93, DB: 0) | 200 OK [http://localhost/lancamentos/4/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-23 19:01:45) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"7yYGoWOmfCv84VES2hE45DdIfOk27t5cphp/S2XUhUc=", "id"=>"4", "lancamento"=>{"horas"=>"8", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "almoco"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"23", "entrada(1i)"=>"2000", "horas_extras"=>"3", "saida(5i)"=>"00", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"11", "entrada(5i)"=>"00", "descricao"=>"Desenvolvimento PR - Carrefour", "data(3i)"=>"19"}}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 4) [0m
+  [4;35;1mLancamento Update (0.0ms)[0m   [0mUPDATE "lancamentos" SET "almoco" = 't', "updated_at" = '2009-11-23 21:01:45' WHERE "id" = 4[0m
+Redirected to http://localhost:3000/lancamentos/4
+Completed in 141ms (DB: 0) | 302 Found [http://localhost/lancamentos/4]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 19:01:45) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 4) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 47ms (View: 15, DB: 0) | 200 OK [http://localhost/lancamentos/4]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 19:01:48) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 110ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-23 19:05:38) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos/3/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-23 19:05:43) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"7yYGoWOmfCv84VES2hE45DdIfOk27t5cphp/S2XUhUc=", "id"=>"3", "lancamento"=>{"horas"=>"8", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "almoco"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"23", "entrada(1i)"=>"2000", "horas_extras"=>"4", "saida(5i)"=>"00", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"10", "entrada(5i)"=>"00", "descricao"=>"Desenvolvimento PR - Carrefour", "data(3i)"=>"18"}}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+  [4;36;1mLancamento Update (0.0ms)[0m   [0;1mUPDATE "lancamentos" SET "almoco" = 't', "updated_at" = '2009-11-23 21:05:43' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/lancamentos/3
+Completed in 109ms (DB: 0) | 302 Found [http://localhost/lancamentos/3]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 19:05:44) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/lancamentos/3]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 19:05:46) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-23 19:05:48) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 4) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 93ms (View: 62, DB: 0) | 200 OK [http://localhost/lancamentos/4/edit]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 19:05:51) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-23 19:05:53) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos/3/edit]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 19:05:56) [GET]
+  [4;36;1mLancamento Load (15.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 110ms (View: 79, DB: 15) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 19:08:12) [GET]
+  [4;35;1mLancamento Load (16.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 93ms (View: 62, DB: 16) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 19:08:28) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mLancamento Load (16.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+
+ActionView::TemplateError (undefined method `alomoco' for #<Lancamento:0x450fdf8>) on line #17 of app/views/lancamentos/show.html.erb:
+14: </p>
+15: <p>
+16: 	<b>Com almoço:</b>
+17:   	<%=h @lancamento.alomoco %>
+18: </p>
+19: <p>
+20:   <b>Horas:</b>
+
+    app/views/lancamentos/show.html.erb:17
+    app/controllers/lancamentos_controller.rb:19:in `show'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 19:08:47) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 19:10:29) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 125ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 19:11:05) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 19:11:10) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 19:11:46) [GET]
+  [4;35;1mLancamento Load (16.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 93ms (View: 62, DB: 16) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-23 19:14:32) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos/5/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-23 19:14:44) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"7yYGoWOmfCv84VES2hE45DdIfOk27t5cphp/S2XUhUc=", "id"=>"5", "lancamento"=>{"horas"=>"8", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "almoco"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"23", "entrada(1i)"=>"2000", "horas_extras"=>"", "saida(5i)"=>"00", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"10", "entrada(5i)"=>"10", "descricao"=>"Desenvolvimento PR - Carrefour", "data(3i)"=>"23"}}
+  [4;35;1mLancamento Load (15.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+  [4;36;1mLancamento Update (0.0ms)[0m   [0;1mUPDATE "lancamentos" SET "total" = 11.83, "saida" = '2000-01-01 23:00:00', "horas_extras" = 3.83, "updated_at" = '2009-11-23 21:14:44' WHERE "id" = 5[0m
+Redirected to http://localhost:3000/lancamentos/5
+Completed in 94ms (DB: 15) | 302 Found [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 19:14:44) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 19:14:46) [GET]
+  [4;36;1mLancamento Load (16.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 109ms (View: 78, DB: 16) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 20:16:05) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 6) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos/6]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 20:16:12) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 140ms (View: 109, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 20:16:16) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mLancamento Load (16.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 47ms (View: 15, DB: 16) | 200 OK [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 20:16:27) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 20:17:37) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos/3]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 20:17:47) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 20:21:35) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 188ms (View: 172, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index to xml (for 127.0.0.1 at 2009-11-23 20:21:37) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/lancamentos.xml]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 20:21:52) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index to xls (for 127.0.0.1 at 2009-11-23 20:21:54) [GET]
+  [4;36;1mLancamento Load (16.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data DESC[0m
+Rendering lancamentos/index
+Completed in 94ms (View: 62, DB: 16) | 200 OK [http://localhost/lancamentos.xls]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 20:24:02) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 110ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index to xls (for 127.0.0.1 at 2009-11-23 20:24:07) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering lancamentos/index
+Completed in 203ms (View: 188, DB: 0) | 200 OK [http://localhost/lancamentos.xls]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 20:25:36) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 62ms (View: 46, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index to xls (for 127.0.0.1 at 2009-11-23 20:25:40) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering lancamentos/index
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://localhost/lancamentos.xls]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 20:28:26) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos/3]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 20:28:35) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 20:30:56) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/lancamentos/3]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 20:31:00) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 93ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-23 23:32:39) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 93ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos/5/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-23 23:32:49) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"7yYGoWOmfCv84VES2hE45DdIfOk27t5cphp/S2XUhUc=", "id"=>"5", "lancamento"=>{"horas"=>"8", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "almoco"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"23", "entrada(1i)"=>"2000", "horas_extras"=>"3.83", "saida(5i)"=>"59", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"10", "entrada(5i)"=>"10", "descricao"=>"Desenvolvimento PR - Carrefour", "data(3i)"=>"23"}}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+  [4;35;1mLancamento Update (15.0ms)[0m   [0mUPDATE "lancamentos" SET "total" = 12.82, "saida" = '2000-01-01 23:59:00', "horas_extras" = 4.82, "updated_at" = '2009-11-24 01:32:49' WHERE "id" = 5[0m
+Redirected to http://localhost:3000/lancamentos/5
+Completed in 62ms (DB: 15) | 302 Found [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-23 23:32:49) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-23 23:32:51) [GET]
+  [4;35;1mLancamento Load (15.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 109ms (View: 78, DB: 15) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-23 23:33:13) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-24 13:57:30) [GET]
+  [4;36;1mLancamento Load (62.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 3297ms (View: 3219, DB: 62) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-24 13:57:41) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 687ms (View: 656, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-24 13:58:11) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"v7czwbsLC8cg/D+Sn/CKGAhHrusSqtL0p9I5kd0rlhs=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "almoco"=>"0", "saida(3i)"=>"24", "saida(4i)"=>"01", "entrada(1i)"=>"2009", "horas_extras"=>"", "saida(5i)"=>"00", "entrada(2i)"=>"11", "entrada(3i)"=>"24", "entrada(4i)"=>"00", "entrada(5i)"=>"00", "descricao"=>"xxx", "data(3i)"=>"24"}}
+  [4;35;1mLancamento Create (0.0ms)[0m   [0mINSERT INTO "lancamentos" ("horas", "updated_at", "saida", "almoco", "total", "entrada", "horas_extras", "descricao", "data", "created_at") VALUES(1.0, '2009-11-24 15:58:11', '2009-11-24 01:00:00', 'f', 1.0, '2009-11-24 00:00:00', NULL, 'xxx', '2009-11-24', '2009-11-24 15:58:11')[0m
+Redirected to http://localhost:3000/lancamentos/7
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/lancamentos]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-24 13:58:11) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 7) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/lancamentos/7]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-24 13:58:14) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-24 13:59:08) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 7) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 219ms (View: 204, DB: 0) | 200 OK [http://localhost/lancamentos/7/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-24 13:59:12) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"v7czwbsLC8cg/D+Sn/CKGAhHrusSqtL0p9I5kd0rlhs=", "id"=>"7", "lancamento"=>{"horas"=>"1", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "almoco"=>"0", "saida(3i)"=>"1", "saida(4i)"=>"01", "entrada(1i)"=>"2000", "horas_extras"=>"", "saida(5i)"=>"00", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"00", "entrada(5i)"=>"00", "descricao"=>"Desenvolvimento PR - Carrefour", "data(3i)"=>"24"}}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 7) [0m
+  [4;36;1mLancamento Update (0.0ms)[0m   [0;1mUPDATE "lancamentos" SET "descricao" = 'Desenvolvimento PR - Carrefour', "updated_at" = '2009-11-24 15:59:12' WHERE "id" = 7[0m
+Redirected to http://localhost:3000/lancamentos/7
+Completed in 63ms (DB: 0) | 302 Found [http://localhost/lancamentos/7]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-24 13:59:13) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 7) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/lancamentos/7]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-24 13:59:14) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 110ms (View: 94, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-24 13:59:16) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-24 13:59:48) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"v7czwbsLC8cg/D+Sn/CKGAhHrusSqtL0p9I5kd0rlhs=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "almoco"=>"0", "saida(3i)"=>"24", "saida(4i)"=>"19", "entrada(1i)"=>"2009", "horas_extras"=>"", "saida(5i)"=>"00", "entrada(2i)"=>"11", "entrada(3i)"=>"24", "entrada(4i)"=>"13", "entrada(5i)"=>"30", "descricao"=>"Desenvolvimento PR - Carrefour", "data(3i)"=>"24"}}
+  [4;35;1mLancamento Create (0.0ms)[0m   [0mINSERT INTO "lancamentos" ("horas", "updated_at", "saida", "almoco", "total", "entrada", "horas_extras", "descricao", "data", "created_at") VALUES(5.5, '2009-11-24 15:59:48', '2009-11-24 19:00:00', 'f', 5.5, '2009-11-24 13:30:00', NULL, 'Desenvolvimento PR - Carrefour', '2009-11-24', '2009-11-24 15:59:48')[0m
+Redirected to http://localhost:3000/lancamentos/8
+Completed in 63ms (DB: 0) | 302 Found [http://localhost/lancamentos]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-24 13:59:48) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 8) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 47ms (View: 15, DB: 0) | 200 OK [http://localhost/lancamentos/8]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-24 13:59:50) [GET]
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 172ms (View: 125, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-24 13:59:58) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 8) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/edit
+Completed in 62ms (View: 46, DB: 0) | 200 OK [http://localhost/lancamentos/8/edit]
+
+
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-24 14:00:10) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"v7czwbsLC8cg/D+Sn/CKGAhHrusSqtL0p9I5kd0rlhs=", "id"=>"8", "lancamento"=>{"horas"=>"5.5", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "almoco"=>"0", "saida(3i)"=>"1", "saida(4i)"=>"19", "entrada(1i)"=>"2000", "horas_extras"=>"", "saida(5i)"=>"30", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"13", "entrada(5i)"=>"30", "descricao"=>"Desenvolvimento PR - Carrefour", "data(3i)"=>"24"}}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 8) [0m
+  [4;36;1mLancamento Update (0.0ms)[0m   [0;1mUPDATE "lancamentos" SET "total" = 6.0, "horas" = 6.0, "saida" = '2000-01-01 19:30:00', "updated_at" = '2009-11-24 16:00:10' WHERE "id" = 8[0m
+Redirected to http://localhost:3000/lancamentos/8
+Completed in 47ms (DB: 0) | 302 Found [http://localhost/lancamentos/8]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-24 14:00:10) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 8) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos/8]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-24 14:00:12) [GET]
+  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-24 18:11:11) [GET]
+  [4;35;1mLancamento Load (343.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 5578ms (View: 2610, DB: 343) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-24 18:11:55) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mLancamento Load (31.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 5) [0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/show
+Completed in 329ms (View: 141, DB: 31) | 200 OK [http://localhost/lancamentos/5]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-24 18:11:58) [GET]
+  [4;35;1mLancamento Load (16.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 656ms (View: 469, DB: 16) | 200 OK [http://localhost/lancamentos]

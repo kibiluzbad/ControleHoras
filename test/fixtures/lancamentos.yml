@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  entrada: 2009-11-18 17:12:41
+  saida: 2009-11-18 17:12:41
+  descricao: MyString
+  horas: 9.99
+  horas_extras: 9.99
+  data: 2009-11-18
+
+two:
+  entrada: 2009-11-18 17:12:41
+  saida: 2009-11-18 17:12:41
+  descricao: MyString
+  horas: 9.99
+  horas_extras: 9.99
+  data: 2009-11-18

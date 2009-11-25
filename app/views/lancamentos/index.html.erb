@@ -1,0 +1,40 @@
+<h1>Horas lançadas</h1>
+
+<table cellpadding="4" cellspacing="0">
+  <tr>
+    <th class="centralizado">Data</th>
+  	<th class="centralizado">Entrada</th>
+    <th class="centralizado">Saida</th>
+    <th class="texto">Descricao</th>
+    <th class="numero">Horas</th>
+    <th class="numero">Extras</th>
+    <th class="numero">Total</th>
+    <th colspan="3">&nbsp;</th>
+  </tr>
+<% @totalGeral = 0 %>
+<% @lancamentos.each do |lancamento| %>
+  <% @totalGeral += lancamento.total %>
+  <tr>
+    <td class="centralizado"><%=h lancamento.data.strftime('%d/%m/%Y') %></td>
+  	<td class="centralizado"><%=h lancamento.entrada.strftime('%H:%M') %></td>
+    <td class="centralizado"><%=h lancamento.saida.strftime('%H:%M') %></td>
+    <td class="texto"><%=h lancamento.descricao %></td>
+    <td class="numero"><%=h lancamento.horas %></td>
+    <td class="numero"><%=h lancamento.horas_extras || '-' %></td>
+    <td class="numero"><%=h lancamento.total %></td>
+    <td><%= link_to 'Exibir', lancamento %></td>
+    <td><%= link_to 'Editar', edit_lancamento_path(lancamento) %></td>
+    <td><%= link_to 'Deletar', lancamento, :confirm => 'Deseja realmente excluir esse item?', :method => :delete %></td>
+  </tr>
+<% end %>
+<tr class="footer">
+	<th colspan="6" class="texto">Total Geral</th>
+	<th class="numero"><%= @totalGeral%></th>
+	<th colspan="3">&nbsp;</th>
+</tr>
+</table>
+
+<br />
+
+<%= link_to 'Novo lançamento', new_lancamento_path %>
+<%= link_to 'Exporta excell', 'lancamentos.xls' %>
