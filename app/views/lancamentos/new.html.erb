@@ -1,8 +1,12 @@
 <h1>New lancamento</h1>
 
 <% form_for(@lancamento) do |f| %>
-  <%= f.error_messages %>
-
+  <% if(!f.error_messages.empty?) %>
+  <div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;"> 
+				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+				<%= f.error_messages %></p>
+			</div>
+  <%end%>
   <p>
     <%= f.label :entrada %><br />
     <%= f.datetime_select :entrada %>
