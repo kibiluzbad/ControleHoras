@@ -1,9 +1,65 @@
-body { background-color: #fff; color: #333; }
+body { background-color: #eee; color: #333; }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
+  font-size:   11px;
   line-height: 18px;
+}
+
+ #content {
+      width: 90%;
+      margin:1em auto;
+      text-align:left;
+      max-width: 1024px;
+      background-color: #fff;
+      }
+#header{
+	height:45px;  
+  	padding:25px;
+  }
+#header label{
+	font-size:22px;
+	font-weight:bolder;
+}
+
+#menu{
+	margin-top:-32px;
+	float:right;
+}
+
+#menu li{
+	display:inline;
+}
+
+#line{
+	height:5px;
+	background-color:#aaa;
+	width:500px
+	margin: 0 auto;
+}
+#sidebar {
+   float: left;
+   width: 200px;
+   margin:0; padding:0;
+}
+#sidebar-content {
+   margin:0; padding: 0.5em 1em;
+   font-size: 100%;
+}
+#main {
+   margin:0 0 0 200px; padding:0;
+}
+#main-content {
+   margin:0; padding: 0.5em 1em;
+   font-size: 100%;
+   border-left:1px dotted #ccc;
+}
+hr.cleaner {
+   clear:both;
+   height:1px;
+   margin: -1px 0 0 0; padding:0;
+   border:none;
+   visibility: hidden;
 }
 
 pre {
@@ -12,23 +68,29 @@ pre {
   font-size: 11px;
 }
 
-a { text-decoration:none; color:#00f}
-a:visited {  color:#00f; }
-a:hover { text-decoration:underline; }
+a { 
+	color: #00f; 
+	text-decoration:none;
+}
+a:visited { 
+	color: #00f;
+	text-decoration:none;
+}
+a:hover { 
+	color: #00f; 
+	text-decoration:underline;
+}
 
 .fieldWithErrors {
-  padding: 2px;
-  background-color: red;
-  display: table;
+  
 }
 
 #errorExplanation {
   width: 400px;
-  border: 2px solid red;
   padding: 7px;
   padding-bottom: 12px;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  
 }
 
 #errorExplanation h2 {
@@ -37,12 +99,9 @@ a:hover { text-decoration:underline; }
   padding: 5px 5px 5px 15px;
   font-size: 12px;
   margin: -7px;
-  background-color: #c00;
-  color: #fff;
 }
 
 #errorExplanation p {
-  color: #333;
   margin-bottom: 0;
   padding: 5px;
 }

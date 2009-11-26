@@ -2802,174 +2802,1930 @@ Processing LancamentosController#index (for 127.0.0.1 at 2009-11-24 18:11:58) [G
 Rendering template within layouts/lancamentos
 Rendering lancamentos/index
 Completed in 656ms (View: 469, DB: 16) | 200 OK [http://localhost/lancamentos]
+/!\ FAILSAFE /!\  Tue Nov 24 22:41:47 -0200 2009
+  Status: 500 Internal Server Error
+  no such file to load -- sqlite3
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:156:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:156:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/requires.rb:7:in `require_library_or_gem'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/reporting.rb:11:in `silence_warnings'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/requires.rb:5:in `require_library_or_gem'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:10:in `sqlite3_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /usr/local/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Tue Nov 24 22:44:29 -0200 2009
+  Status: 500 Internal Server Error
+  no such file to load -- sqlite3
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:156:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:156:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/requires.rb:7:in `require_library_or_gem'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/reporting.rb:11:in `silence_warnings'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/requires.rb:5:in `require_library_or_gem'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:10:in `sqlite3_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /usr/local/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Tue Nov 24 22:44:35 -0200 2009
+  Status: 500 Internal Server Error
+  no such file to load -- sqlite3
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:156:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:156:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/requires.rb:7:in `require_library_or_gem'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/reporting.rb:11:in `silence_warnings'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/kernel/requires.rb:5:in `require_library_or_gem'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:10:in `sqlite3_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /usr/local/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Tue Nov 24 22:48:51 -0200 2009
+  Status: 500 Internal Server Error
+  uninitialized constant Encoding
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:443:in `load_missing_constant'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:80:in `const_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:92:in `const_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/sqlite3-0.0.3/lib/sqlite3/encoding.rb:9:in `find'
+    /usr/local/lib/ruby/gems/1.8/gems/sqlite3-0.0.3/lib/sqlite3/database.rb:69:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /usr/local/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Tue Nov 24 22:52:10 -0200 2009
+  Status: 500 Internal Server Error
+  uninitialized constant Encoding
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:443:in `load_missing_constant'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:80:in `const_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:92:in `const_missing'
+    /usr/local/lib/ruby/gems/1.8/gems/sqlite3-0.0.3/lib/sqlite3/encoding.rb:9:in `find'
+    /usr/local/lib/ruby/gems/1.8/gems/sqlite3-0.0.3/lib/sqlite3/database.rb:69:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/sqlite3_adapter.rb:13:in `sqlite3_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /usr/local/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
 
 
-Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 09:53:23) [GET]
-  [4;36;1mLancamento Load (78.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 20:47:20) [GET]
+  [4;36;1mLancamento Load (2.1ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
 Rendering template within layouts/lancamentos
 Rendering lancamentos/index
-Completed in 2593ms (View: 2453, DB: 78) | 200 OK [http://localhost/lancamentos]
+Completed in 103ms (View: 96, DB: 2) | 200 OK [http://localhost/lancamentos]
 
 
-Processing LancamentosController#new (for 127.0.0.1 at 2009-11-25 09:53:31) [GET]
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:11:15) [GET]
+  [4;36;1mLancamento Load (2.7ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 104ms (View: 97, DB: 3) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:12:16) [GET]
+  [4;35;1mLancamento Load (1.1ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 119ms (View: 93, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:14:05) [GET]
+  [4;36;1mLancamento Load (1.2ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 39ms (View: 32, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:14:37) [GET]
+  [4;35;1mLancamento Load (3.9ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 98ms (View: 89, DB: 4) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:15:39) [GET]
+  [4;36;1mLancamento Load (1.2ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 43ms (View: 36, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:16:02) [GET]
+  [4;35;1mLancamento Load (1.2ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 41ms (View: 36, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:16:02) [GET]
+  [4;36;1mLancamento Load (1.1ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 39ms (View: 33, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:16:03) [GET]
+  [4;35;1mLancamento Load (1.1ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 49ms (View: 34, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:16:44) [GET]
+  [4;36;1mLancamento Load (36.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 93ms (View: 43, DB: 36) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:17:07) [GET]
+  [4;35;1mLancamento Load (0.9ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 43ms (View: 32, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:17:09) [GET]
+  [4;36;1mLancamento Load (1.1ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 93ms (View: 87, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:17:09) [GET]
+  [4;35;1mLancamento Load (3.1ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 40ms (View: 31, DB: 3) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:17:09) [GET]
+  [4;36;1mLancamento Load (21.6ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 165ms (View: 139, DB: 22) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:17:10) [GET]
+  [4;35;1mLancamento Load (1.1ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 40ms (View: 34, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:17:31) [GET]
+  [4;36;1mLancamento Load (2.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 83ms (View: 74, DB: 2) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:17:32) [GET]
+  [4;35;1mLancamento Load (1.6ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 47ms (View: 35, DB: 2) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:17:32) [GET]
+  [4;36;1mLancamento Load (1.1ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 48ms (View: 34, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:17:44) [GET]
+  [4;35;1mLancamento Load (1.8ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 48ms (View: 40, DB: 2) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:17:55) [GET]
+  [4;36;1mLancamento Load (1.5ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 41ms (View: 35, DB: 2) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:17:55) [GET]
+  [4;35;1mLancamento Load (1.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 89ms (View: 80, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:17:55) [GET]
+  [4;36;1mLancamento Load (1.1ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 54ms (View: 48, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:17:55) [GET]
+  [4;35;1mLancamento Load (1.6ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 90ms (View: 84, DB: 2) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:18:11) [GET]
+  [4;36;1mLancamento Load (1.1ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 48ms (View: 36, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:18:27) [GET]
+  [4;35;1mLancamento Load (1.2ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 89ms (View: 79, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:20:45) [GET]
+  [4;36;1mLancamento Load (1.1ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 43ms (View: 38, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:17) [GET]
+  [4;35;1mLancamento Load (1.3ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 45ms (View: 40, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:29) [GET]
+  [4;36;1mLancamento Load (1.3ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 48ms (View: 39, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:30) [GET]
+  [4;35;1mLancamento Load (1.1ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 41ms (View: 34, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:30) [GET]
+  [4;36;1mLancamento Load (5.2ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 88ms (View: 78, DB: 5) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:31) [GET]
+  [4;35;1mLancamento Load (1.2ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 46ms (View: 41, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:31) [GET]
+  [4;36;1mLancamento Load (1.1ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 193ms (View: 162, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:31) [GET]
+  [4;35;1mLancamento Load (1.2ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 111ms (View: 106, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:31) [GET]
+  [4;36;1mLancamento Load (1.1ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 163ms (View: 155, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:31) [GET]
+  [4;35;1mLancamento Load (1.2ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 169ms (View: 127, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:32) [GET]
+  [4;36;1mLancamento Load (1.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 42ms (View: 34, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:32) [GET]
+  [4;35;1mLancamento Load (2.3ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 116ms (View: 67, DB: 2) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:42) [GET]
+  [4;36;1mLancamento Load (1.1ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 45ms (View: 34, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:43) [GET]
+  [4;35;1mLancamento Load (0.6ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 90ms (View: 81, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:44) [GET]
+  [4;36;1mLancamento Load (1.4ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 39ms (View: 34, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:44) [GET]
+  [4;35;1mLancamento Load (1.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 175ms (View: 170, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:44) [GET]
+  [4;36;1mLancamento Load (1.2ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 39ms (View: 30, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:44) [GET]
+  [4;35;1mLancamento Load (0.3ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 221ms (View: 180, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:44) [GET]
+  [4;36;1mLancamento Load (1.1ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 40ms (View: 32, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:58) [GET]
+  [4;35;1mLancamento Load (1.4ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 42ms (View: 34, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:59) [GET]
+  [4;36;1mLancamento Load (1.2ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 84ms (View: 37, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:59) [GET]
+  [4;35;1mLancamento Load (1.3ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 54ms (View: 38, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:21:59) [GET]
+  [4;36;1mLancamento Load (7.8ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 117ms (View: 105, DB: 8) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:22:06) [GET]
+  [4;35;1mLancamento Load (1.3ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 47ms (View: 34, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:22:08) [GET]
+  [4;36;1mLancamento Load (1.3ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 83ms (View: 75, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:22:08) [GET]
+  [4;35;1mLancamento Load (0.6ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 44ms (View: 33, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:22:08) [GET]
+  [4;36;1mLancamento Load (1.8ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 100ms (View: 79, DB: 2) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:22:09) [GET]
+  [4;35;1mLancamento Load (27.9ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 69ms (View: 36, DB: 28) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:22:09) [GET]
+  [4;36;1mLancamento Load (0.8ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 51ms (View: 37, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:22:09) [GET]
+  [4;35;1mLancamento Load (1.2ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 120ms (View: 98, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:22:09) [GET]
+  [4;36;1mLancamento Load (2.3ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 133ms (View: 127, DB: 2) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:22:09) [GET]
+  [4;35;1mLancamento Load (1.4ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 81ms (View: 73, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:22:36) [GET]
+  [4;36;1mLancamento Load (1.2ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 39ms (View: 33, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:24:52) [GET]
+  [4;35;1mLancamento Load (2.2ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 98ms (View: 85, DB: 2) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:25:23) [GET]
+  [4;36;1mLancamento Load (0.7ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 44ms (View: 34, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:25:46) [GET]
+  [4;35;1mLancamento Load (4.3ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 84ms (View: 74, DB: 4) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:25:48) [GET]
+  [4;36;1mLancamento Load (1.1ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 51ms (View: 34, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:25:59) [GET]
+  [4;35;1mLancamento Load (0.7ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 40ms (View: 34, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:26:14) [GET]
+  [4;36;1mLancamento Load (0.8ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 45ms (View: 36, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:26:23) [GET]
+  [4;35;1mLancamento Load (2.2ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 40ms (View: 32, DB: 2) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:26:51) [GET]
+  [4;36;1mLancamento Load (1.5ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 89ms (View: 82, DB: 2) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:27:47) [GET]
+  [4;35;1mLancamento Load (1.1ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 45ms (View: 35, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:30:21) [GET]
+  [4;36;1mLancamento Load (1.4ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 96ms (View: 90, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:30:23) [GET]
+  [4;35;1mLancamento Load (7.3ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 43ms (View: 32, DB: 7) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:30:24) [GET]
+  [4;36;1mLancamento Load (1.8ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 83ms (View: 73, DB: 2) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:30:25) [GET]
+  [4;35;1mLancamento Load (1.8ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 42ms (View: 34, DB: 2) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-25 21:30:34) [GET]
 Rendering template within layouts/lancamentos
 Rendering lancamentos/new
-Completed in 875ms (View: 859, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+Completed in 238ms (View: 231, DB: 0) | 200 OK [http://localhost/lancamentos/new]
 
 
-Processing LancamentosController#create (for 127.0.0.1 at 2009-11-25 09:54:18) [POST]
-  Parameters: {"commit"=>"Create", "authenticity_token"=>"U3SHkN0pZA7n+GtzEERxR0YUNjQ9wHb3CEP+q1H7rqg=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "almoco"=>"1", "saida(3i)"=>"25", "saida(4i)"=>"18", "entrada(1i)"=>"2009", "horas_extras"=>"", "saida(5i)"=>"28", "entrada(2i)"=>"11", "entrada(3i)"=>"25", "entrada(4i)"=>"09", "entrada(5i)"=>"29", "descricao"=>"xxx", "data(3i)"=>"25"}}
-  [4;35;1mLancamento Create (0.0ms)[0m   [0mINSERT INTO "lancamentos" ("horas", "updated_at", "saida", "almoco", "total", "entrada", "horas_extras", "descricao", "data", "created_at") VALUES(7.98, '2009-11-25 11:54:18', '2009-11-25 18:28:00', 't', 7.98, '2009-11-25 09:29:00', NULL, 'xxx', '2009-11-25', '2009-11-25 11:54:18')[0m
-Redirected to http://localhost:3000/lancamentos/9
-Completed in 63ms (DB: 0) | 302 Found [http://localhost/lancamentos]
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:30:39) [GET]
+  [4;36;1mLancamento Load (1.2ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 41ms (View: 33, DB: 1) | 200 OK [http://localhost/lancamentos]
 
 
-Processing LancamentosController#show (for 127.0.0.1 at 2009-11-25 09:54:18) [GET]
-  Parameters: {"id"=>"9"}
-  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 9) [0m
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-25 21:30:41) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mLancamento Load (0.4ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
 Rendering template within layouts/lancamentos
 Rendering lancamentos/show
-Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos/9]
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/lancamentos/3]
 
 
-Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-25 09:54:31) [GET]
-  Parameters: {"id"=>"9"}
-  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 9) [0m
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:30:44) [GET]
+  [4;36;1mLancamento Load (1.1ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 89ms (View: 84, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:32:12) [GET]
+  [4;35;1mLancamento Load (1.1ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 39ms (View: 33, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:33:49) [GET]
+  [4;36;1mLancamento Load (1.2ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 107ms (View: 102, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:34:09) [GET]
+  [4;35;1mLancamento Load (1.6ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 41ms (View: 33, DB: 2) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:34:42) [GET]
+  [4;36;1mLancamento Load (1.7ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 83ms (View: 76, DB: 2) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:35:05) [GET]
+  [4;35;1mLancamento Load (1.2ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 42ms (View: 37, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:36:52) [GET]
+  [4;36;1mLancamento Load (1.1ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 164ms (View: 159, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:37:20) [GET]
+  [4;35;1mLancamento Load (1.2ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 43ms (View: 33, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-25 21:37:56) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mLancamento Load (0.3ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
 Rendering template within layouts/lancamentos
 Rendering lancamentos/edit
-Completed in 203ms (View: 172, DB: 0) | 200 OK [http://localhost/lancamentos/9/edit]
+Completed in 178ms (View: 159, DB: 0) | 200 OK [http://localhost/lancamentos/3/edit]
 
 
-Processing LancamentosController#update (for 127.0.0.1 at 2009-11-25 09:54:38) [PUT]
-  Parameters: {"commit"=>"Update", "authenticity_token"=>"U3SHkN0pZA7n+GtzEERxR0YUNjQ9wHb3CEP+q1H7rqg=", "id"=>"9", "lancamento"=>{"horas"=>"7.98", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "almoco"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"18", "entrada(1i)"=>"2000", "horas_extras"=>"", "saida(5i)"=>"30", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"09", "entrada(5i)"=>"29", "descricao"=>"xxx", "data(3i)"=>"25"}}
-  [4;36;1mLancamento Load (16.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 9) [0m
-  [4;35;1mLancamento Update (0.0ms)[0m   [0mUPDATE "lancamentos" SET "total" = 8.02, "horas" = 8.0, "saida" = '2000-01-01 18:30:00', "horas_extras" = 0.02, "updated_at" = '2009-11-25 11:54:38' WHERE "id" = 9[0m
-Redirected to http://localhost:3000/lancamentos/9
-Completed in 93ms (DB: 16) | 302 Found [http://localhost/lancamentos/9]
+Processing LancamentosController#update (for 127.0.0.1 at 2009-11-25 21:37:58) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"k5X65pKHeqeVc1WlZrKYbBZl9qW0bkiQxrTzQP4isXI=", "id"=>"3", "lancamento"=>{"horas"=>"8", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "almoco"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"23", "entrada(1i)"=>"2000", "saida(5i)"=>"00", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "horas_extras"=>"4", "entrada(4i)"=>"10", "entrada(5i)"=>"00", "descricao"=>"Desenvolvimento PR - Carrefour", "data(3i)"=>"18"}}
+  [4;35;1mLancamento Load (0.4ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
+Redirected to http://localhost:3000/lancamentos/3
+Completed in 38ms (DB: 0) | 302 Found [http://localhost/lancamentos/3]
 
 
-Processing LancamentosController#show (for 127.0.0.1 at 2009-11-25 09:54:38) [GET]
-  Parameters: {"id"=>"9"}
-  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 9) [0m
+Processing LancamentosController#show (for 127.0.0.1 at 2009-11-25 21:37:59) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mLancamento Load (0.4ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
 Rendering template within layouts/lancamentos
 Rendering lancamentos/show
-Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos/9]
+Completed in 20ms (View: 3, DB: 0) | 200 OK [http://localhost/lancamentos/3]
 
 
-Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-25 09:54:49) [GET]
-  Parameters: {"id"=>"9"}
-  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 9) [0m
-Rendering template within layouts/lancamentos
-Rendering lancamentos/edit
-Completed in 110ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos/9/edit]
-
-
-Processing LancamentosController#update (for 127.0.0.1 at 2009-11-25 09:54:54) [PUT]
-  Parameters: {"commit"=>"Update", "authenticity_token"=>"U3SHkN0pZA7n+GtzEERxR0YUNjQ9wHb3CEP+q1H7rqg=", "id"=>"9", "lancamento"=>{"horas"=>"8", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "almoco"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"18", "entrada(1i)"=>"2000", "horas_extras"=>"0.02", "saida(5i)"=>"30", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"09", "entrada(5i)"=>"30", "descricao"=>"xxx", "data(3i)"=>"25"}}
-  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 9) [0m
-  [4;35;1mLancamento Update (0.0ms)[0m   [0mUPDATE "lancamentos" SET "total" = 8.0, "entrada" = '2000-01-01 09:30:00', "horas_extras" = NULL, "updated_at" = '2009-11-25 11:54:54' WHERE "id" = 9[0m
-Redirected to http://localhost:3000/lancamentos/9
-Completed in 93ms (DB: 0) | 302 Found [http://localhost/lancamentos/9]
-
-
-Processing LancamentosController#show (for 127.0.0.1 at 2009-11-25 09:54:54) [GET]
-  Parameters: {"id"=>"9"}
-  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 9) [0m
-Rendering template within layouts/lancamentos
-Rendering lancamentos/show
-Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos/9]
-
-
-Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 09:54:57) [GET]
-  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:38:02) [GET]
+  [4;35;1mLancamento Load (1.1ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
 Rendering template within layouts/lancamentos
 Rendering lancamentos/index
-Completed in 109ms (View: 78, DB: 0) | 200 OK [http://localhost/lancamentos]
+Completed in 92ms (View: 58, DB: 1) | 200 OK [http://localhost/lancamentos]
 
 
-Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-25 09:55:11) [GET]
-  Parameters: {"id"=>"9"}
-  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 9) [0m
-Rendering template within layouts/lancamentos
-Rendering lancamentos/edit
-Completed in 172ms (View: 141, DB: 0) | 200 OK [http://localhost/lancamentos/9/edit]
-
-
-Processing LancamentosController#update (for 127.0.0.1 at 2009-11-25 09:55:16) [PUT]
-  Parameters: {"commit"=>"Update", "authenticity_token"=>"U3SHkN0pZA7n+GtzEERxR0YUNjQ9wHb3CEP+q1H7rqg=", "id"=>"9", "lancamento"=>{"horas"=>"8", "data(1i)"=>"2009", "saida(1i)"=>"2000", "data(2i)"=>"11", "saida(2i)"=>"1", "almoco"=>"1", "saida(3i)"=>"1", "saida(4i)"=>"18", "entrada(1i)"=>"2000", "horas_extras"=>"", "saida(5i)"=>"30", "entrada(2i)"=>"1", "entrada(3i)"=>"1", "entrada(4i)"=>"09", "entrada(5i)"=>"30", "descricao"=>"Desenvolvimento PR - Carrefour", "data(3i)"=>"25"}}
-  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 9) [0m
-  [4;36;1mLancamento Update (0.0ms)[0m   [0;1mUPDATE "lancamentos" SET "descricao" = 'Desenvolvimento PR - Carrefour', "updated_at" = '2009-11-25 11:55:16' WHERE "id" = 9[0m
-Redirected to http://localhost:3000/lancamentos/9
-Completed in 172ms (DB: 0) | 302 Found [http://localhost/lancamentos/9]
-
-
-Processing LancamentosController#show (for 127.0.0.1 at 2009-11-25 09:55:16) [GET]
-  Parameters: {"id"=>"9"}
-  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 9) [0m
-Rendering template within layouts/lancamentos
-Rendering lancamentos/show
-Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/lancamentos/9]
-
-
-Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 09:55:19) [GET]
-  [4;36;1mLancamento Load (15.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
-Rendering template within layouts/lancamentos
-Rendering lancamentos/index
-Completed in 94ms (View: 63, DB: 15) | 200 OK [http://localhost/lancamentos]
-
-
-Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 09:58:17) [GET]
-  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
-Rendering template within layouts/lancamentos
-Rendering lancamentos/index
-Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos]
-
-
-Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 09:59:07) [GET]
-  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
-Rendering template within layouts/lancamentos
-Rendering lancamentos/index
-Completed in 110ms (View: 79, DB: 0) | 200 OK [http://localhost/lancamentos]
-
-
-Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 09:59:21) [GET]
-  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
-Rendering template within layouts/lancamentos
-Rendering lancamentos/index
-Completed in 125ms (View: 109, DB: 0) | 200 OK [http://localhost/lancamentos]
-
-
-Processing LancamentosController#new (for 127.0.0.1 at 2009-11-25 09:59:26) [GET]
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-25 21:38:11) [GET]
 Rendering template within layouts/lancamentos
 Rendering lancamentos/new
-Completed in 234ms (View: 203, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+Completed in 91ms (View: 74, DB: 0) | 200 OK [http://localhost/lancamentos/new]
 
 
-Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 09:59:28) [GET]
-  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-25 21:38:12) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"k5X65pKHeqeVc1WlZrKYbBZl9qW0bkiQxrTzQP4isXI=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "almoco"=>"0", "saida(3i)"=>"25", "saida(4i)"=>"23", "entrada(1i)"=>"2009", "saida(5i)"=>"38", "entrada(2i)"=>"11", "entrada(3i)"=>"25", "horas_extras"=>"", "entrada(4i)"=>"23", "entrada(5i)"=>"38", "descricao"=>"", "data(3i)"=>"25"}}
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 42ms (View: 34, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:38:26) [GET]
+  [4;36;1mLancamento Load (1.2ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
 Rendering template within layouts/lancamentos
 Rendering lancamentos/index
-Completed in 172ms (View: 47, DB: 0) | 200 OK [http://localhost/lancamentos]
+Completed in 92ms (View: 76, DB: 1) | 200 OK [http://localhost/lancamentos]
 
 
-Processing LancamentosController#edit (for 127.0.0.1 at 2009-11-25 09:59:34) [GET]
-  Parameters: {"id"=>"3"}
-  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
-Rendering template within layouts/lancamentos
-Rendering lancamentos/edit
-Completed in 125ms (View: 94, DB: 0) | 200 OK [http://localhost/lancamentos/3/edit]
-
-
-Processing LancamentosController#show (for 127.0.0.1 at 2009-11-25 09:59:41) [GET]
-  Parameters: {"id"=>"3"}
-  [4;36;1mLancamento Load (0.0ms)[0m   [0;1mSELECT * FROM "lancamentos" WHERE ("lancamentos"."id" = 3) [0m
-Rendering template within layouts/lancamentos
-Rendering lancamentos/show
-Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/lancamentos/3]
-
-
-Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 09:59:43) [GET]
-  [4;35;1mLancamento Load (0.0ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:46:44) [GET]
+  [4;35;1mLancamento Load (1.2ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
 Rendering template within layouts/lancamentos
 Rendering lancamentos/index
-Completed in 109ms (View: 94, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+ActionView::TemplateError (undefined method `javascript_link_tag' for #<ActionView::Base:0xb71a3760>) on line #10 of app/views/layouts/lancamentos.html.erb:
+7:   <title>Lancamentos: <%= controller.action_name %></title>
+8:   <%= stylesheet_link_tag 'scaffold' %>
+9:   <%= stylesheet_link_tag 'cupertino/jquery-ui-1.7.2.custom' %>
+10:   <%= javascript_link_tag 'jquery-1.3.2.min.js' %>
+11:   <%= javascript_link_tag 'jquery-ui-1.7.2.custom.min.js' %>
+12: </head>
+13: <body>
+
+    app/views/layouts/lancamentos.html.erb:10
+    app/controllers/lancamentos_controller.rb:7:in `index'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (87.8ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:47:27) [GET]
+  [4;36;1mLancamento Load (1.1ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+
+ActionView::TemplateError (undefined method `javascript_script_tag' for #<ActionView::Base:0xb7076040>) on line #10 of app/views/layouts/lancamentos.html.erb:
+7:   <title>Lancamentos: <%= controller.action_name %></title>
+8:   <%= stylesheet_link_tag 'scaffold' %>
+9:   <%= stylesheet_link_tag 'cupertino/jquery-ui-1.7.2.custom' %>
+10:   <%= javascript_script_tag 'jquery-1.3.2.min.js' %>
+11:   <%= javascript_script_tag 'jquery-ui-1.7.2.custom.min.js' %>
+12: </head>
+13: <body>
+
+    app/views/layouts/lancamentos.html.erb:10
+    app/controllers/lancamentos_controller.rb:7:in `index'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:47:28) [GET]
+  [4;35;1mLancamento Load (1.4ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+
+ActionView::TemplateError (undefined method `javascript_script_tag' for #<ActionView::Base:0xb6fc8648>) on line #10 of app/views/layouts/lancamentos.html.erb:
+7:   <title>Lancamentos: <%= controller.action_name %></title>
+8:   <%= stylesheet_link_tag 'scaffold' %>
+9:   <%= stylesheet_link_tag 'cupertino/jquery-ui-1.7.2.custom' %>
+10:   <%= javascript_script_tag 'jquery-1.3.2.min.js' %>
+11:   <%= javascript_script_tag 'jquery-ui-1.7.2.custom.min.js' %>
+12: </head>
+13: <body>
+
+    app/views/layouts/lancamentos.html.erb:10
+    app/controllers/lancamentos_controller.rb:7:in `index'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:48:35) [GET]
+  [4;36;1mLancamento Load (1.4ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 97ms (View: 90, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-25 21:53:09) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 47ms (View: 40, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-25 21:53:15) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"k5X65pKHeqeVc1WlZrKYbBZl9qW0bkiQxrTzQP4isXI=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "almoco"=>"0", "saida(3i)"=>"25", "saida(4i)"=>"23", "entrada(1i)"=>"2009", "saida(5i)"=>"53", "entrada(2i)"=>"11", "entrada(3i)"=>"25", "horas_extras"=>"", "entrada(4i)"=>"23", "entrada(5i)"=>"53", "descricao"=>"", "data(3i)"=>"25"}}
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 84ms (View: 75, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-25 21:55:11) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"k5X65pKHeqeVc1WlZrKYbBZl9qW0bkiQxrTzQP4isXI=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "almoco"=>"0", "saida(3i)"=>"25", "saida(4i)"=>"23", "entrada(1i)"=>"2009", "saida(5i)"=>"53", "entrada(2i)"=>"11", "entrada(3i)"=>"25", "horas_extras"=>"", "entrada(4i)"=>"23", "entrada(5i)"=>"53", "descricao"=>"", "data(3i)"=>"25"}}
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+ERROR: compiling _run_erb_app47views47lancamentos47new46html46erb RAISED compile error
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:4: syntax error, unexpected ';', expecting ')'
+;  if(f.error_messages( ; @output_buffer.concat "\n  <d...
+                         ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:9: syntax error, unexpected kEND, expecting ')'
+; end; @output_buffer.concat "\n  \n\n  <p>\n    "
+     ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:42: syntax error, unexpected kEND, expecting ')'
+;  end ; @output_buffer.concat "\n\n"
+      ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:46: syntax error, unexpected kENSURE, expecting ')'
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:48: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47lancamentos47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New lancamento</h1>\n\n"
+
+;  form_for(@lancamento) do |f| ; @output_buffer.concat "\n  "
+;  if(f.error_messages( ; @output_buffer.concat "\n  <div class=\"ui-state-highlight ui-corner-all\" style=\"margin-top: 20px; padding: 0 .7em;\"> \r\n\t\t\t\t<p><span class=\"ui-icon ui-icon-info\" style=\"float: left; margin-right: .3em;\"></span>\r\n\t\t\t\t"
+
+
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "</p>\r\n\t\t\t</div>\n  "
+
+; end; @output_buffer.concat "\n  \n\n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label :entrada ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.datetime_select :entrada ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :saida ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.datetime_select :saida ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :descricao ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :descricao ).to_s); @output_buffer.concat "\n  </p>\n  <p>"
+
+; @output_buffer.concat(( f.label :com_almoco ).to_s); @output_buffer.concat "<br />\n  \t"
+; @output_buffer.concat(( f.check_box :almoco ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :horas ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :horas ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :horas_extras ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :horas_extras ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :data ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.date_select :data ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', lancamentos_path ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:48:in `compile!'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/home/leonardo/work/ControleHoras/app/controllers/lancamentos_controller.rb:52:in `create'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/leonardo/work/ControleHoras/app/controllers/lancamentos_controller.rb:46:in `create'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:4: syntax error, unexpected ';', expecting ')'
+;  if(f.error_messages( ; @output_buffer.concat "\n  <d...
+                         ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:9: syntax error, unexpected kEND, expecting ')'
+; end; @output_buffer.concat "\n  \n\n  <p>\n    "
+     ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:42: syntax error, unexpected kEND, expecting ')'
+;  end ; @output_buffer.concat "\n\n"
+      ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:46: syntax error, unexpected kENSURE, expecting ')'
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:48: syntax error, unexpected kEND, expecting ')') on line #4 of app/views/lancamentos/new.html.erb:
+1: <h1>New lancamento</h1>
+2: 
+3: <% form_for(@lancamento) do |f| %>
+4:   <% if(f.error_messages( %>
+5:   <div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;"> 
+6: 				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+7: 				<%= f.error_messages %></p>
+
+    app/views/lancamentos/new.html.erb:48:in `compile!'
+    app/controllers/lancamentos_controller.rb:52:in `create'
+    app/controllers/lancamentos_controller.rb:46:in `create'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (93.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-25 21:55:24) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+ERROR: compiling _run_erb_app47views47lancamentos47new46html46erb RAISED compile error
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:4: syntax error, unexpected ';', expecting ')'
+;  if(f.error_messages( ; @output_buffer.concat "\n  <d...
+                         ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:9: syntax error, unexpected kEND, expecting ')'
+; end; @output_buffer.concat "\n  \n\n  <p>\n    "
+     ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:42: syntax error, unexpected kEND, expecting ')'
+;  end ; @output_buffer.concat "\n\n"
+      ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:46: syntax error, unexpected kENSURE, expecting ')'
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:48: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47lancamentos47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New lancamento</h1>\n\n"
+
+;  form_for(@lancamento) do |f| ; @output_buffer.concat "\n  "
+;  if(f.error_messages( ; @output_buffer.concat "\n  <div class=\"ui-state-highlight ui-corner-all\" style=\"margin-top: 20px; padding: 0 .7em;\"> \r\n\t\t\t\t<p><span class=\"ui-icon ui-icon-info\" style=\"float: left; margin-right: .3em;\"></span>\r\n\t\t\t\t"
+
+
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "</p>\r\n\t\t\t</div>\n  "
+
+; end; @output_buffer.concat "\n  \n\n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label :entrada ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.datetime_select :entrada ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :saida ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.datetime_select :saida ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :descricao ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :descricao ).to_s); @output_buffer.concat "\n  </p>\n  <p>"
+
+; @output_buffer.concat(( f.label :com_almoco ).to_s); @output_buffer.concat "<br />\n  \t"
+; @output_buffer.concat(( f.check_box :almoco ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :horas ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :horas ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :horas_extras ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :horas_extras ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :data ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.date_select :data ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', lancamentos_path ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:48:in `compile!'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/leonardo/work/ControleHoras/app/controllers/lancamentos_controller.rb:30:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:4: syntax error, unexpected ';', expecting ')'
+;  if(f.error_messages( ; @output_buffer.concat "\n  <d...
+                         ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:9: syntax error, unexpected kEND, expecting ')'
+; end; @output_buffer.concat "\n  \n\n  <p>\n    "
+     ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:42: syntax error, unexpected kEND, expecting ')'
+;  end ; @output_buffer.concat "\n\n"
+      ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:46: syntax error, unexpected kENSURE, expecting ')'
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:48: syntax error, unexpected kEND, expecting ')') on line #4 of app/views/lancamentos/new.html.erb:
+1: <h1>New lancamento</h1>
+2: 
+3: <% form_for(@lancamento) do |f| %>
+4:   <% if(f.error_messages( %>
+5:   <div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;"> 
+6: 				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+7: 				<%= f.error_messages %></p>
+
+    app/views/lancamentos/new.html.erb:48:in `compile!'
+    app/controllers/lancamentos_controller.rb:30:in `new'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-25 21:55:57) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+ERROR: compiling _run_erb_app47views47lancamentos47new46html46erb RAISED compile error
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:4: syntax error, unexpected ';', expecting ')'
+;  if(f.error_messages( ; @output_buffer.concat "\n  <d...
+                         ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:9: syntax error, unexpected kEND, expecting ')'
+; end;; @output_buffer.concat "\n  \n\n  <p>\n    "
+     ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:42: syntax error, unexpected kEND, expecting ')'
+;  end ; @output_buffer.concat "\n\n"
+      ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:46: syntax error, unexpected kENSURE, expecting ')'
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:48: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47lancamentos47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New lancamento</h1>\n\n"
+
+;  form_for(@lancamento) do |f| ; @output_buffer.concat "\n  "
+;  if(f.error_messages( ; @output_buffer.concat "\n  <div class=\"ui-state-highlight ui-corner-all\" style=\"margin-top: 20px; padding: 0 .7em;\"> \r\n\t\t\t\t<p><span class=\"ui-icon ui-icon-info\" style=\"float: left; margin-right: .3em;\"></span>\r\n\t\t\t\t"
+
+
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "</p>\r\n\t\t\t</div>\n  "
+
+; end;; @output_buffer.concat "\n  \n\n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label :entrada ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.datetime_select :entrada ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :saida ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.datetime_select :saida ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :descricao ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :descricao ).to_s); @output_buffer.concat "\n  </p>\n  <p>"
+
+; @output_buffer.concat(( f.label :com_almoco ).to_s); @output_buffer.concat "<br />\n  \t"
+; @output_buffer.concat(( f.check_box :almoco ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :horas ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :horas ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :horas_extras ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :horas_extras ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :data ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.date_select :data ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', lancamentos_path ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:48:in `compile!'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/leonardo/work/ControleHoras/app/controllers/lancamentos_controller.rb:30:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:4: syntax error, unexpected ';', expecting ')'
+;  if(f.error_messages( ; @output_buffer.concat "\n  <d...
+                         ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:9: syntax error, unexpected kEND, expecting ')'
+; end;; @output_buffer.concat "\n  \n\n  <p>\n    "
+     ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:42: syntax error, unexpected kEND, expecting ')'
+;  end ; @output_buffer.concat "\n\n"
+      ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:46: syntax error, unexpected kENSURE, expecting ')'
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:48: syntax error, unexpected kEND, expecting ')') on line #4 of app/views/lancamentos/new.html.erb:
+1: <h1>New lancamento</h1>
+2: 
+3: <% form_for(@lancamento) do |f| %>
+4:   <% if(f.error_messages( %>
+5:   <div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;"> 
+6: 				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+7: 				<%= f.error_messages %></p>
+
+    app/views/lancamentos/new.html.erb:48:in `compile!'
+    app/controllers/lancamentos_controller.rb:30:in `new'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (113.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-25 21:55:57) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+ERROR: compiling _run_erb_app47views47lancamentos47new46html46erb RAISED compile error
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:4: syntax error, unexpected ';', expecting ')'
+;  if(f.error_messages( ; @output_buffer.concat "\n  <d...
+                         ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:9: syntax error, unexpected kEND, expecting ')'
+; end;; @output_buffer.concat "\n  \n\n  <p>\n    "
+     ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:42: syntax error, unexpected kEND, expecting ')'
+;  end ; @output_buffer.concat "\n\n"
+      ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:46: syntax error, unexpected kENSURE, expecting ')'
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:48: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47lancamentos47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New lancamento</h1>\n\n"
+
+;  form_for(@lancamento) do |f| ; @output_buffer.concat "\n  "
+;  if(f.error_messages( ; @output_buffer.concat "\n  <div class=\"ui-state-highlight ui-corner-all\" style=\"margin-top: 20px; padding: 0 .7em;\"> \r\n\t\t\t\t<p><span class=\"ui-icon ui-icon-info\" style=\"float: left; margin-right: .3em;\"></span>\r\n\t\t\t\t"
+
+
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "</p>\r\n\t\t\t</div>\n  "
+
+; end;; @output_buffer.concat "\n  \n\n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label :entrada ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.datetime_select :entrada ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :saida ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.datetime_select :saida ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :descricao ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :descricao ).to_s); @output_buffer.concat "\n  </p>\n  <p>"
+
+; @output_buffer.concat(( f.label :com_almoco ).to_s); @output_buffer.concat "<br />\n  \t"
+; @output_buffer.concat(( f.check_box :almoco ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :horas ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :horas ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :horas_extras ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :horas_extras ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :data ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.date_select :data ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', lancamentos_path ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:48:in `compile!'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/leonardo/work/ControleHoras/app/controllers/lancamentos_controller.rb:30:in `new'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:4: syntax error, unexpected ';', expecting ')'
+;  if(f.error_messages( ; @output_buffer.concat "\n  <d...
+                         ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:9: syntax error, unexpected kEND, expecting ')'
+; end;; @output_buffer.concat "\n  \n\n  <p>\n    "
+     ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:42: syntax error, unexpected kEND, expecting ')'
+;  end ; @output_buffer.concat "\n\n"
+      ^
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:46: syntax error, unexpected kENSURE, expecting ')'
+/home/leonardo/work/ControleHoras/app/views/lancamentos/new.html.erb:48: syntax error, unexpected kEND, expecting ')') on line #4 of app/views/lancamentos/new.html.erb:
+1: <h1>New lancamento</h1>
+2: 
+3: <% form_for(@lancamento) do |f| %>
+4:   <% if(f.error_messages( %>
+5:   <div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;"> 
+6: 				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+7: 				<%= f.error_messages %></p>
+
+    app/views/lancamentos/new.html.erb:48:in `compile!'
+    app/controllers/lancamentos_controller.rb:30:in `new'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-25 21:56:28) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 90ms (View: 84, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-25 21:56:34) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"k5X65pKHeqeVc1WlZrKYbBZl9qW0bkiQxrTzQP4isXI=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "almoco"=>"0", "saida(3i)"=>"25", "saida(4i)"=>"23", "entrada(1i)"=>"2009", "saida(5i)"=>"56", "entrada(2i)"=>"11", "entrada(3i)"=>"25", "horas_extras"=>"", "entrada(4i)"=>"23", "entrada(5i)"=>"56", "descricao"=>"", "data(3i)"=>"25"}}
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 58ms (View: 34, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-25 21:56:40) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"k5X65pKHeqeVc1WlZrKYbBZl9qW0bkiQxrTzQP4isXI=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "almoco"=>"0", "saida(3i)"=>"25", "saida(4i)"=>"23", "entrada(1i)"=>"2009", "saida(5i)"=>"56", "entrada(2i)"=>"11", "entrada(3i)"=>"25", "horas_extras"=>"", "entrada(4i)"=>"23", "entrada(5i)"=>"56", "descricao"=>"", "data(3i)"=>"25"}}
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 227ms (View: 200, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-25 21:57:14) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"k5X65pKHeqeVc1WlZrKYbBZl9qW0bkiQxrTzQP4isXI=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "almoco"=>"0", "saida(3i)"=>"25", "saida(4i)"=>"23", "entrada(1i)"=>"2009", "saida(5i)"=>"56", "entrada(2i)"=>"11", "entrada(3i)"=>"25", "horas_extras"=>"", "entrada(4i)"=>"23", "entrada(5i)"=>"56", "descricao"=>"", "data(3i)"=>"25"}}
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 82ms (View: 74, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-25 21:58:01) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"k5X65pKHeqeVc1WlZrKYbBZl9qW0bkiQxrTzQP4isXI=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "almoco"=>"0", "saida(3i)"=>"25", "saida(4i)"=>"23", "entrada(1i)"=>"2009", "saida(5i)"=>"56", "entrada(2i)"=>"11", "entrada(3i)"=>"25", "horas_extras"=>"", "entrada(4i)"=>"23", "entrada(5i)"=>"56", "descricao"=>"", "data(3i)"=>"25"}}
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 242ms (View: 203, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 21:58:06) [GET]
+  [4;35;1mLancamento Load (3.1ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 46ms (View: 37, DB: 3) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-25 21:58:09) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 84ms (View: 76, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-25 21:58:54) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"k5X65pKHeqeVc1WlZrKYbBZl9qW0bkiQxrTzQP4isXI=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "almoco"=>"0", "saida(3i)"=>"25", "saida(4i)"=>"23", "entrada(1i)"=>"2009", "saida(5i)"=>"58", "entrada(2i)"=>"11", "entrada(3i)"=>"25", "horas_extras"=>"", "entrada(4i)"=>"23", "entrada(5i)"=>"58", "descricao"=>"", "data(3i)"=>"25"}}
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 41ms (View: 32, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-25 22:00:00) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"k5X65pKHeqeVc1WlZrKYbBZl9qW0bkiQxrTzQP4isXI=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "almoco"=>"0", "saida(3i)"=>"25", "saida(4i)"=>"23", "entrada(1i)"=>"2009", "saida(5i)"=>"58", "entrada(2i)"=>"11", "entrada(3i)"=>"25", "horas_extras"=>"", "entrada(4i)"=>"23", "entrada(5i)"=>"58", "descricao"=>"", "data(3i)"=>"25"}}
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 251ms (View: 221, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 22:00:04) [GET]
+  [4;36;1mLancamento Load (1.5ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 42ms (View: 35, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-25 22:00:07) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 96ms (View: 71, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 22:00:11) [GET]
+  [4;35;1mLancamento Load (1.7ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 43ms (View: 33, DB: 2) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-25 22:00:13) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 79ms (View: 71, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-25 22:00:17) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"k5X65pKHeqeVc1WlZrKYbBZl9qW0bkiQxrTzQP4isXI=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "almoco"=>"0", "saida(3i)"=>"26", "saida(4i)"=>"00", "entrada(1i)"=>"2009", "saida(5i)"=>"00", "entrada(2i)"=>"11", "entrada(3i)"=>"26", "horas_extras"=>"", "entrada(4i)"=>"00", "entrada(5i)"=>"00", "descricao"=>"", "data(3i)"=>"26"}}
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 53ms (View: 28, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 22:00:40) [GET]
+  [4;36;1mLancamento Load (1.2ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 47ms (View: 36, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-25 22:00:44) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 39ms (View: 34, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-25 22:00:46) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"JQpXD69aENsOEQWpODHi9HgwcdjnDoN+j9Ff3nBvmtg=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "almoco"=>"0", "saida(3i)"=>"26", "saida(4i)"=>"00", "entrada(1i)"=>"2009", "saida(5i)"=>"00", "entrada(2i)"=>"11", "entrada(3i)"=>"26", "horas_extras"=>"", "entrada(4i)"=>"00", "entrada(5i)"=>"00", "descricao"=>"", "data(3i)"=>"26"}}
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 51ms (View: 34, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-25 22:01:58) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"JQpXD69aENsOEQWpODHi9HgwcdjnDoN+j9Ff3nBvmtg=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "almoco"=>"0", "saida(3i)"=>"26", "saida(4i)"=>"00", "entrada(1i)"=>"2009", "saida(5i)"=>"00", "entrada(2i)"=>"11", "entrada(3i)"=>"26", "horas_extras"=>"", "entrada(4i)"=>"00", "entrada(5i)"=>"00", "descricao"=>"", "data(3i)"=>"26"}}
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 83ms (View: 45, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 22:02:08) [GET]
+  [4;35;1mLancamento Load (1.2ms)[0m   [0mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 42ms (View: 33, DB: 1) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#new (for 127.0.0.1 at 2009-11-25 22:02:24) [GET]
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 35ms (View: 29, DB: 0) | 200 OK [http://localhost/lancamentos/new]
+
+
+Processing LancamentosController#create (for 127.0.0.1 at 2009-11-25 22:02:45) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"JQpXD69aENsOEQWpODHi9HgwcdjnDoN+j9Ff3nBvmtg=", "lancamento"=>{"horas"=>"", "data(1i)"=>"2009", "saida(1i)"=>"2009", "data(2i)"=>"11", "saida(2i)"=>"11", "almoco"=>"0", "saida(3i)"=>"26", "saida(4i)"=>"00", "entrada(1i)"=>"2009", "saida(5i)"=>"02", "entrada(2i)"=>"11", "entrada(3i)"=>"26", "horas_extras"=>"", "entrada(4i)"=>"00", "entrada(5i)"=>"02", "descricao"=>"", "data(3i)"=>"26"}}
+Rendering template within layouts/lancamentos
+Rendering lancamentos/new
+Completed in 40ms (View: 32, DB: 0) | 200 OK [http://localhost/lancamentos]
+
+
+Processing LancamentosController#index (for 127.0.0.1 at 2009-11-25 22:03:13) [GET]
+  [4;36;1mLancamento Load (1.4ms)[0m   [0;1mSELECT * FROM "lancamentos" ORDER BY data[0m
+Rendering template within layouts/lancamentos
+Rendering lancamentos/index
+Completed in 87ms (View: 40, DB: 1) | 200 OK [http://localhost/lancamentos]
