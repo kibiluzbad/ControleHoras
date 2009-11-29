@@ -1,39 +1,6 @@
-<h1>Editing lancamento</h1>
+<h1>Editar lançamento</h1>
 
-<% form_for(@lancamento) do |f| %>
-  <%= f.error_messages %>
+<%= render :partial => "form",
+:locals => { :button_label => "Atualizar"} %>
 
-  <p>
-    <%= f.label :entrada %><br />
-    <%= f.datetime_select :entrada %>
-  </p>
-  <p>
-    <%= f.label :saida %><br />
-    <%= f.datetime_select :saida %>
-  </p>
-  <p>
-    <%= f.label :descricao %><br />
-    <%= f.text_field :descricao %>
-  </p>
-  <p><%= f.label :com_almoco %><br />
-  	<%= f.check_box :almoco %>
-  </p> 
-  <p>
-    <%= f.label :horas %><br />
-    <%= f.text_field :horas %>
-  </p>
-  <p>
-    <%= f.label :horas_extras %><br />
-    <%= f.text_field :horas_extras %>
-  </p>
-  <p>
-    <%= f.label :data %><br />
-    <%= f.date_select :data %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
-
-<%= link_to 'Show', @lancamento %> |
-<%= link_to 'Back', lancamentos_path %>
+<%= link_to 'Voltar', lancamentos_path %>

@@ -14,7 +14,7 @@
 </p>
 <p>
 	<b>Com almoço:</b>
-  	<%=h @lancamento.almoco %>
+  	<%=h @lancamento.almoco.to_sim_nao %>
 </p>
 <p>
   <b>Horas:</b>
@@ -31,6 +31,4 @@
   <%=h @lancamento.data.strftime('%d/%m/%Y') %>
 </p>
 
-
-<%= link_to 'Edit', edit_lancamento_path(@lancamento) %> |
-<%= link_to 'Back', lancamentos_path %>
+<%= link_to 'Voltar', lancamentos_path %>
