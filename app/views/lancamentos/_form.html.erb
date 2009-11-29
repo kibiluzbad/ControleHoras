@@ -1,0 +1,46 @@
+<% form_for(@lancamento) do |f| %>
+  <% if(!f.error_messages.empty?) %>
+  <div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;"> 
+				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+				<%= f.error_messages %></p>
+			</div>
+  <%end%>
+  <p>
+    <%= f.label :entrada %><br />
+    <%= f.datetime_select :entrada, 
+    :discard_day => true,
+    :discard_month => true, 
+    :discard_year => true,
+    :default => Time.now %>
+  </p>
+  <p>
+    <%= f.label :saida %><br />
+    <%= f.datetime_select :saida,
+    :discard_day => true,
+    :discard_month => true, 
+    :discard_year => true,
+    :default => Time.now %>
+  </p>
+  <p>
+    <%= f.label :descricao %><br />
+    <%= f.text_field :descricao %>
+  </p>
+  <p><%= f.label :com_almoco %><br />
+  	<%= f.check_box :almoco %>
+  </p>
+  <p>
+    <%= f.label :horas %><br />
+    <%= f.text_field :horas %>
+  </p>
+  <p>
+    <%= f.label :horas_extras %><br />
+    <%= f.text_field :horas_extras %>
+  </p>
+  <p>
+    <%= f.label :data %><br />
+    <%= f.date_select :data %>
+  </p>
+  <p>
+    <%= f.submit button_label %>
+  </p>
+<% end %>
