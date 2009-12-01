@@ -1,4 +1,4 @@
-<h1>Editar lançamento</h1>
+<h1>Horas do dia <%= @lancamento.data.strftime('%d/%m/%Y') %></h1>
 
 <%= render :partial => "form",
 :locals => { :button_label => "Atualizar"} %>

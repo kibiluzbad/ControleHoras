@@ -6,6 +6,10 @@
 			</div>
   <%end%>
   <p>
+    <%= f.label :data %><br />
+    <%= f.date_select :data %>
+  </p>
+  <p>
     <%= f.label :entrada %><br />
     <%= f.datetime_select :entrada, 
     :discard_day => true,
@@ -35,11 +39,7 @@
   <p>
     <%= f.label :horas_extras %><br />
     <%= f.text_field :horas_extras %>
-  </p>
-  <p>
-    <%= f.label :data %><br />
-    <%= f.date_select :data %>
-  </p>
+  </p>  
   <p>
     <%= f.submit button_label %>
   </p>
