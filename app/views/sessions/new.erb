@@ -1,21 +1,11 @@
-<%= stylesheet_link_tag 'openid' %>
-<%= javascript_include_tag 'jquery-1.3.2.min' %>
-<%= javascript_include_tag 'openid-jquery' %>
-
-<script type="text/javascript">
-	$(document).ready(function() {
-	    openid.init('openid_identifier');
-	});
-</script>
-
 <% form_tag(session_url, :id => 'openid_form', :selected => true) do %>
 	<input type="hidden" name="action" value="verify" />
 
 	<fieldset>
-    		<legend>Sign-in or Create New Account</legend>
+    		<legend>Sign-in ou crie uma nova conta</legend>
     		
     		<div id="openid_choice">
-	    		<p>Please click your account provider:</p>
+	    		<p>Escolha o seu provedor:</p>
 	    		<div id="openid_btns"></div>
 			</div>
 			

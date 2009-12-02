@@ -9,7 +9,8 @@ xml.Workbook({
 
   xml.Worksheet 'ss:Name' => 'Recent Orders' do
     xml.Table do
-
+	  xml.Column 'ss:Width' => '57'
+	  xml.Column 'ss:Index' => '5', 'ss:Width' => '158'
       # Header
       xml.Row do
           xml.Cell { xml.Data 'Data', 'ss:Type' => 'String' }
