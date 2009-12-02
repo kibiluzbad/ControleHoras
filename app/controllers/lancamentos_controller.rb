@@ -3,24 +3,26 @@ class LancamentosController < ApplicationController
   # GET /lancamentos
   # GET /lancamentos.xml
   def index
-	 
+	
+  	 hoje = Time.now 
+  	
+  	 @year = hoje.year
+  	 @month = hoje.month 
+  	 
 	 if(params[:date])
 	 
-	 year = Integer(params[:date][:year])
-	 month = Integer(params[:date][:month])
-    requested_date = Date.new(year, month, 1)
-    from = requested_date - 1
-  	 to =  requested_date >> 1
+	 	@year = Integer(params[:date][:year])
+		@month = Integer(params[:date][:month])
+    
+     end
+     
+     requested_date = Date.new(@year, @month, 1)
+     from = requested_date
+  	 to =  (requested_date >> 1) - 1
   	 
   	 @lancamentos = Lancamento.all(:order => 'data',:conditions => ['data BETWEEN ? AND ?',from, to] )
   	 
-  	 else
-  	 
-  	 @lancamentos = Lancamento.all(:order => 'data')
-  	 
-    end
-	
-    respond_to do |format|
+  	 respond_to do |format|
       format.html # index.html.erb
       format.xls  # exporta para xls
       format.xml  { render :xml => @lancamentos }      

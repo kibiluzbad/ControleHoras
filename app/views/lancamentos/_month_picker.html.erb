@@ -1,11 +1,11 @@
 <form action="/lancamentos" method="get">
 <p>
 Ano:
-<%= select_year(Date.today,:name => 'ano') %>
+<%= select_year(@year,:name => 'ano') %>
 </p>
 <p>
 Mês:
-<%= select_month(Date.today, :use_month_names => %w(Janeiro Fevereiro Março Abril Maio Junho Julho Agosto Setembro Outubro Novembro Dezembro)) %>
+<%= select_month(@month, :use_month_names => %w(Janeiro Fevereiro Março Abril Maio Junho Julho Agosto Setembro Outubro Novembro Dezembro)) %>
 </p>
 <p>
 <%= submit_tag "Buscar" %>

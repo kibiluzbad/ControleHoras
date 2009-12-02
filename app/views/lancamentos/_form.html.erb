@@ -1,3 +1,10 @@
+<script language="javascript">
+	$(document).ready(function(){
+		$('#lancamento_horas').attr('readonly','true');
+	    $('#lancamento_horas_extras').attr('readonly','true');			
+	})
+    
+</script>
 <% form_for(@lancamento) do |f| %>
   <% if(!f.error_messages.empty?) %>
   <div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;"> 
