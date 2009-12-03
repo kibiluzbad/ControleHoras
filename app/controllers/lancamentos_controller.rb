@@ -1,5 +1,5 @@
 class LancamentosController < ApplicationController
-  before_filter :signin_required
+  #before_filter :signin_required
   # GET /lancamentos
   # GET /lancamentos.xml
   def index
