@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.connect 'lancamentos/:year/:month', :action => 'index', :controller => 'lancamentos', :requirements => {:month => /[0-9]{1,2}/, :year => /[0-9]{4,}/}
+  map.connect 'lancamentos/:year/:month.:format', :action => 'index', :controller => 'lancamentos', :requirements => {:month => /[0-9]{1,2}/, :year => /[0-9]{4,}/}
   map.resources :lancamentos
 
   # The priority is based upon order of creation: first created -> highest priority.

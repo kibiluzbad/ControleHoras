@@ -1,20 +1,21 @@
 class LancamentosController < ApplicationController
+  before_filter :load_date
+    
   #before_filter :signin_required
   # GET /lancamentos
   # GET /lancamentos.xml
   def index
-	
-  	 hoje = Time.now 
-  	
-  	 @year = hoje.year
-  	 @month = hoje.month 
-  	 
+  
 	 if(params[:date])
-	 
-	 	@year = Integer(params[:date][:year])
+		@year = Integer(params[:date][:year])
 		@month = Integer(params[:date][:month])
-    
      end
+	 if(!params[:month].nil? &&
+		!params[:year].nil?)
+		@year = Integer(params[:year])
+		@month = Integer(params[:month])
+     end
+	 
      
      requested_date = Date.new(@year, @month, 1)
      from = requested_date
@@ -100,5 +101,13 @@ class LancamentosController < ApplicationController
       format.html { redirect_to(lancamentos_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  private
+  def load_date
+   hoje = Time.now
+   
+   @year = hoje.year
+   @month = hoje.month 
   end
 end
