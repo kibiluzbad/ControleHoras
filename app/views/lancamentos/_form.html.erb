@@ -1,9 +1,20 @@
-<script language="javascript">
+﻿<script language="javascript">
 	$(document).ready(function(){
 		$('#lancamento_horas').attr('readonly','true');
-	    $('#lancamento_horas_extras').attr('readonly','true');			
-	})
-    
+	    $('#lancamento_horas_extras').attr('readonly','true');
+		display_almoco($('.com_almoco'));
+		$('.com_almoco').click(function(){
+			display_almoco($(this));
+		});
+		
+		function display_almoco(elem){
+			if($(elem).attr('checked')){
+				$('#almoco').show();
+			}else{
+				$('#almoco').hide();
+			}
+		}
+	});
 </script>
 <% form_for(@lancamento) do |f| %>
   <% if(!f.error_messages.empty?) %>
@@ -37,8 +48,24 @@
     <%= f.text_field :descricao %>
   </p>
   <p><%= f.label :com_almoco %><br />
-  	<%= f.check_box :almoco %>
+  	<%= f.check_box :almoco, { :class => "com_almoco" } %>
   </p>
+  <div id="almoco">
+  <p><%= f.label :almoco_saida, "Saída" %><br />
+  	<%= f.datetime_select :almoco_saida, 
+    :discard_day => true,
+    :discard_month => true, 
+    :discard_year => true,
+    :default => Time.now %>
+  </p>
+  <p><%= f.label :almoco, "Volta" %><br />
+  	<%= f.datetime_select :almoco_volta, 
+    :discard_day => true,
+    :discard_month => true, 
+    :discard_year => true,
+    :default => Time.now %>
+  </p>
+  </div>
   <p>
     <%= f.label :horas %><br />
     <%= f.text_field :horas %>

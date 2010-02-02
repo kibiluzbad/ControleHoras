@@ -9,19 +9,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091201012339) do
+ActiveRecord::Schema.define(:version => 20100202135621) do
 
   create_table "lancamentos", :force => true do |t|
     t.time     "entrada"
     t.time     "saida"
     t.string   "descricao"
-    t.integer  "horas",        :limit => 10, :precision => 10, :scale => 0
-    t.integer  "horas_extras", :limit => 10, :precision => 10, :scale => 0
+    t.decimal  "horas"
+    t.decimal  "horas_extras"
     t.date     "data"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "total",        :limit => 10, :precision => 10, :scale => 0
+    t.decimal  "total"
     t.boolean  "almoco"
+    t.time     "almoco_saida"
+    t.time     "almoco_volta"
+    t.boolean  "pago"
   end
 
   create_table "open_id_authentication_associations", :force => true do |t|

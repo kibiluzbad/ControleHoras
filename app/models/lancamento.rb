@@ -1,14 +1,18 @@
 class Lancamento < ActiveRecord::Base
 	validates_presence_of :entrada, :saida, :data, :descricao
+	validate :valida_hora_do_almoco, :if => "almoco"
 	
 	before_save {|l| l.calcular_horas()}
+	
+	def horario_almoco()
+		if almoco
+    		return ((self.almoco_volta - self.almoco_saida) / 3600)
+    	end
+		return 0
+	end
     
     def calcular_horas()
-    	hora_de_almoco = 0
-    	
-    	if almoco
-    		hora_de_almoco = 1
-    	end	
+    	hora_de_almoco = horario_almoco()
     	
     	self.total = ((self.saida - self.entrada) / 3600).round(2) - hora_de_almoco
     	self.horas = self.total
@@ -18,5 +22,14 @@ class Lancamento < ActiveRecord::Base
 			self.horas_extras = self.horas - 8
 			self.horas = 8
 	    end
+	end
+	
+	private
+	def valida_hora_do_almoco()
+		errors.add(:almoco, "inválido") if 
+			self.almoco_saida >= self.almoco_volta ||
+			self.almoco_saida < self.entrada ||
+			self.almoco_saida > self.saida ||
+			self.almoco_volta > self.saida
 	end
 end

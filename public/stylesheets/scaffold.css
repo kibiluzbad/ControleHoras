@@ -135,3 +135,7 @@ th{
 	border-top: 1px #ddd solid;
 	border-bottom: none;
 }
+
+fieldset{
+	border: 1px solid #ccc;
+}

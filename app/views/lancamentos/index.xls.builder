@@ -15,6 +15,8 @@ xml.Workbook({
       xml.Row do
           xml.Cell { xml.Data 'Data', 'ss:Type' => 'String' }
           xml.Cell { xml.Data 'Entrada', 'ss:Type' => 'String' }
+		  xml.Cell { xml.Data 'Almoço Saida', 'ss:Type' => 'String' }
+		  xml.Cell { xml.Data 'Almoço Volta', 'ss:Type' => 'String' }
           xml.Cell { xml.Data 'Saida', 'ss:Type' => 'String' }
           xml.Cell { xml.Data 'Horas', 'ss:Type' => 'String' }
           xml.Cell { xml.Data 'Descricao', 'ss:Type' => 'String' }
@@ -26,6 +28,8 @@ xml.Workbook({
             xml.Cell { xml.Data lancamento.data.strftime('%d/%m/%Y'), 'ss:Type' => 'String' }
             xml.Cell { xml.Data lancamento.entrada.strftime('%H:%M'), 'ss:Type' => 'String' }
             xml.Cell { xml.Data lancamento.saida.strftime('%H:%M'), 'ss:Type' => 'String' }
+			xml.Cell { xml.Data lancamento.almoco_saida.strftime('%H:%M'), 'ss:Type' => 'String' }
+            xml.Cell { xml.Data lancamento.almoco_volta.strftime('%H:%M'), 'ss:Type' => 'String' }
             xml.Cell { xml.Data lancamento.total , 'ss:Type' => 'String' }
             xml.Cell { xml.Data lancamento.descricao , 'ss:Type' => 'String' }
         end

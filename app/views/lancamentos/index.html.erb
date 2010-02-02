@@ -5,6 +5,7 @@
     <th class="centralizado">Data</th>
   	<th class="centralizado">Entrada</th>
     <th class="centralizado">Saida</th>
+	<th class="centralizado">Almoço</th>
     <th class="texto">Descricao</th>
     <th class="numero">Horas</th>
     <th class="numero">Extras</th>
@@ -18,17 +19,24 @@
     <td class="centralizado"><%=h lancamento.data.strftime('%d/%m/%Y') %></td>
   	<td class="centralizado"><%=h lancamento.entrada.strftime('%H:%M') %></td>
     <td class="centralizado"><%=h lancamento.saida.strftime('%H:%M') %></td>
+	<td class="centralizado"><%=h lancamento.almoco ? lancamento.horario_almoco : "-" %></td>
     <td class="texto"><%=h lancamento.descricao %></td>
     <td class="numero"><%=h lancamento.horas %></td>
     <td class="numero"><%=h lancamento.horas_extras || '-' %></td>
     <td class="numero"><%=h lancamento.total %></td>
+	<% if !lancamento.pago %>
+	<% @pago = false %>
     <td><%= link_to 'Exibir', lancamento %></td>
     <td><%= link_to 'Editar', edit_lancamento_path(lancamento) %></td>
     <td><%= link_to 'Deletar', lancamento, :confirm => 'Deseja realmente excluir esse item?', :method => :delete %></td>
+	<% else %>
+	<% @pago = true %>
+	<td colspan="3">&nbsp;</td>
+	<% end %>
   </tr>
 <% end %>
 <tr class="footer">
-	<th colspan="6" class="texto">Total Geral</th>
+	<th colspan="7" class="texto">Total Geral</th>
 	<th class="numero"><%= @totalGeral%></th>
 	<th colspan="3">&nbsp;</th>
 </tr>
@@ -39,6 +47,11 @@
 				Não há lançamentos registrados.</p>
 			</div><%end%>
 <br />
-
+<% if !@pago %>
 <%= link_to 'Novo lançamento', new_lancamento_path %>
-<%= link_to 'Exporta excell', 'lancamentos/' + @year.to_s + '/' + @month.to_s + '.xls' %>
+|
+<%= link_to 'Pagamento efetuado', '/lancamentos/pagamento/' + @year.to_s + '/' + @month.to_s %>
+|
+<% end %>
+<%= link_to 'Exporta excell', '/lancamentos/' + @year.to_s + '/' + @month.to_s + '.xls' %>
+

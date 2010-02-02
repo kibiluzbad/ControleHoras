@@ -1,3 +1,9 @@
+<fieldset>
+<legend>Principal</legend>
+<p>
+  <b>Data:</b>
+  <%=h @lancamento.data.strftime('%d/%m/%Y') %>
+</p>
 <p>
   <b>Entrada:</b>
   <%=h @lancamento.entrada.strftime('%H:%M') %>
@@ -12,10 +18,25 @@
   <b>Descricao:</b>
   <%=h @lancamento.descricao %>
 </p>
-<p>
-	<b>Com almoço:</b>
-  	<%=h @lancamento.almoco.to_sim_nao %>
+</fieldset>
+<% if @lancamento.almoco %>
+<fieldset>
+<legend>
+	Almoço
+</legend>  	
 </p>
+<p>
+  <b>Saida:</b>
+  <%=h @lancamento.almoco_saida.strftime('%H:%M') %>
+</p>
+<p>
+  <b>Volta:</b>
+  <%=h @lancamento.almoco_volta.strftime('%H:%M') %>
+</p>
+</fieldset>
+<% end %>
+<fieldset>
+<legend>Horas</legend>
 <p>
   <b>Horas:</b>
   <%=h @lancamento.horas %>
@@ -25,10 +46,5 @@
   <b>Horas extras:</b>
   <%=h @lancamento.horas_extras || '-' %>
 </p>
-
-<p>
-  <b>Data:</b>
-  <%=h @lancamento.data.strftime('%d/%m/%Y') %>
-</p>
-
+</fieldset>
 <%= link_to 'Voltar', lancamentos_path %>

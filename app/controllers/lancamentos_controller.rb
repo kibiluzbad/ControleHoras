@@ -1,6 +1,6 @@
 class LancamentosController < ApplicationController
   before_filter :load_date
-  before_filter :signin_required
+  #before_filter :signin_required
   
   # GET /lancamentos
   # GET /lancamentos.xml
@@ -16,7 +16,6 @@ class LancamentosController < ApplicationController
 		@month = Integer(params[:month])
      end
 	 
-     
      requested_date = Date.new(@year, @month, 1)
      from = requested_date
   	 to =  (requested_date >> 1) - 1
@@ -102,6 +101,24 @@ class LancamentosController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def pagamento
+	@year = Integer(params[:year])
+	@month = Integer(params[:month])
+	
+	requested_date = Date.new(@year, @month, 1)
+     from = requested_date
+  	 to =  (requested_date >> 1) - 1
+	
+	Lancamento.all(:order => 'data',:conditions => ['data BETWEEN ? AND ?',from, to] ).each do |lancamento|
+		lancamento.pago = true
+		lancamento.save
+	end
+	
+	flash[:notice] = "Pagamento do mes recebido."
+	
+	redirect_to :action => "index"
+  end
   
   private
   def load_date
@@ -111,3 +128,4 @@ class LancamentosController < ApplicationController
    @month = hoje.month 
   end
 end
+
