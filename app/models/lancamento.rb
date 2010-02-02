@@ -1,6 +1,6 @@
 class Lancamento < ActiveRecord::Base
 	validates_presence_of :entrada, :saida, :data, :descricao
-	validate :valida_hora_do_almoco, :if => "almoco"
+	#validate :valida_hora_do_almoco, :if => "almoco"
 	
 	before_save {|l| l.calcular_horas()}
 	
