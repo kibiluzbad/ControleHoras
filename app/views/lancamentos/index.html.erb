@@ -17,9 +17,9 @@
   <% @totalGeral += lancamento.total %>
   <tr>
     <td class="centralizado"><%=h lancamento.data.strftime('%d/%m/%Y') %></td>
-  	<td class="centralizado"><%=h lancamento.entrada.strftime('%H:%M') %></td>
+  	 <td class="centralizado"><%=h lancamento.entrada.strftime('%H:%M') %></td>
     <td class="centralizado"><%=h lancamento.saida.strftime('%H:%M') %></td>
-	<td class="centralizado"><%=h lancamento.almoco && !lancamento.horario_almoco.nil? ? lancamento.horario_almoco : "-" %></td>
+	 <td class="centralizado"><%=h lancamento.almoco && !lancamento.horario_almoco.nil? ? lancamento.horario_almoco : '-' %></td>
     <td class="texto"><%=h lancamento.descricao %></td>
     <td class="numero"><%=h lancamento.horas %></td>
     <td class="numero"><%=h lancamento.horas_extras || '-' %></td>
