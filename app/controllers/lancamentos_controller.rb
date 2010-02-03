@@ -1,6 +1,6 @@
 class LancamentosController < ApplicationController
   before_filter :load_date
-  before_filter :signin_required
+  #before_filter :signin_required
   
   # GET /lancamentos
   # GET /lancamentos.xml
