@@ -36,10 +36,13 @@ class Lancamento < ActiveRecord::Base
 	
 	private
 	def valida_hora_do_almoco()
-		errors.add(:almoco, "inválido") if 
-			self.almoco_saida >= self.almoco_volta ||
-			self.almoco_saida < self.entrada ||
-			self.almoco_saida > self.saida ||
-			self.almoco_volta > self.saida
+		if self.almoco_saida.nil? &&
+			self.almoco_volta.nil?				
+			errors.add(:almoco, "inválido") if 
+				self.almoco_saida >= self.almoco_volta ||
+				self.almoco_saida < self.entrada ||
+				self.almoco_saida > self.saida ||
+				self.almoco_volta > self.saida
+		end
 	end
 end
