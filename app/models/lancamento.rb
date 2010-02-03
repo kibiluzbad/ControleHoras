@@ -6,6 +6,11 @@ class Lancamento < ActiveRecord::Base
 	
 	def horario_almoco()
 		if almoco
+			if self.almoco_volta.nil? ||
+			   self.almoco_saida.nil?
+				return 1
+			end
+
     		return ((self.almoco_volta - self.almoco_saida) / 3600)
     	end
 		return 0
