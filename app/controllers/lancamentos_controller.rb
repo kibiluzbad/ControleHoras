@@ -1,6 +1,6 @@
 class LancamentosController < ApplicationController
   before_filter :load_date
-  before_filter :signin_required
+  #before_filter :signin_required
   
   # GET /lancamentos
   # GET /lancamentos.xml
@@ -64,7 +64,7 @@ class LancamentosController < ApplicationController
     respond_to do |format|
       if @lancamento.save
         flash[:notice] = 'Lancamento was successfully created.'
-        format.html { redirect_to(@lancamento) }
+        format.html { redirect_to('/lancamentos/' + @year.to_s + '/' + @month.to_s) }
         format.xml  { render :xml => @lancamento, :status => :created, :location => @lancamento }
       else
         format.html { render :action => "new" }
@@ -125,7 +125,13 @@ class LancamentosController < ApplicationController
    hoje = Time.now
    
    @year = hoje.year
-   @month = hoje.month 
+   @month = hoje.month
+   
+   if(!params[:year].nil? &&
+	  !params[:month].nil?)
+	  @year = params[:year].to_i
+	  @month = params[:month].to_i
+   end
   end
 end
 

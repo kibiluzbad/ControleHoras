@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.connect 'lancamentos/pagamento/:year/:month', :action => 'pagamento', :controller => 'lancamentos', :requirements => {:month => /[0-9]{1,2}/, :year => /[0-9]{4,}/}
+  map.connect '/lancamentos/:action/:year/:month', :controller => 'lancamentos', :requirements => {:action => /pagamento|new/, :month => /[0-9]{1,2}/, :year => /[0-9]{4,}/}  
   map.connect 'lancamentos/:year/:month', :action => 'index', :controller => 'lancamentos', :requirements => {:month => /[0-9]{1,2}/, :year => /[0-9]{4,}/}
   map.connect 'lancamentos/:year/:month.:format', :action => 'index', :controller => 'lancamentos', :requirements => {:month => /[0-9]{1,2}/, :year => /[0-9]{4,}/}
   map.resources :lancamentos

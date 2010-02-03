@@ -25,15 +25,15 @@
   <%end%>
   <p>
     <%= f.label :data %><br />
-    <%= f.date_select :data %>
+    <%= f.date_select :data, :default => Date.new(@year,@month,Time.now.day) %>
   </p>
-  <p>
+  <p>  
     <%= f.label :entrada %><br />
     <%= f.datetime_select :entrada, 
     :discard_day => true,
     :discard_month => true, 
     :discard_year => true,
-    :default => Time.now %>
+    :default => Time.now%>
   </p>
   <p>
     <%= f.label :saida %><br />
@@ -79,4 +79,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Voltar', lancamentos_path %>
+<%= link_to 'Voltar', '/lancamentos/' + @year.to_s + '/' + @month.to_s %>

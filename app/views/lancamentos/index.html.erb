@@ -1,4 +1,4 @@
-<h1>Horas lançadas - <%= @month %> / <%= @year %></h1>
+<h1>Horas lançadas - <%= Date.new(2000,@month,1).strftime('%B') %> / <%= @year %></h1>
 <% if !@lancamentos.empty? %>
 <table cellpadding="4" cellspacing="0">
   <tr>
@@ -17,9 +17,9 @@
   <% @totalGeral += lancamento.total %>
   <tr>
     <td class="centralizado"><%=h lancamento.data.strftime('%d/%m/%Y') %></td>
-  	 <td class="centralizado"><%=h lancamento.entrada.strftime('%H:%M') %></td>
+  	<td class="centralizado"><%=h lancamento.entrada.strftime('%H:%M') %></td>
     <td class="centralizado"><%=h lancamento.saida.strftime('%H:%M') %></td>
-	 <td class="centralizado"><%=h lancamento.almoco && !lancamento.almoco_saida.nil? && !lancamento.almoco_volta.nil? ? lancamento.horario_almoco : '-' %></td>
+	<td class="centralizado"><%=h lancamento.almoco ? lancamento.horario_almoco_minutos : "-" %></td>
     <td class="texto"><%=h lancamento.descricao %></td>
     <td class="numero"><%=h lancamento.horas %></td>
     <td class="numero"><%=h lancamento.horas_extras || '-' %></td>
@@ -48,10 +48,14 @@
 			</div><%end%>
 <br />
 <% if !@pago %>
-<%= link_to 'Novo lançamento', new_lancamento_path %>
+<%= link_to 'Novo lançamento', '/lancamentos/new/' + @year.to_s + '/' + @month.to_s %>
+<% if !@lancamentos.empty? %>
 |
 <%= link_to 'Pagamento efetuado', '/lancamentos/pagamento/' + @year.to_s + '/' + @month.to_s %>
 |
 <% end %>
+<% end %>
+<% if !@lancamentos.empty? %>
 <%= link_to 'Exporta excell', '/lancamentos/' + @year.to_s + '/' + @month.to_s + '.xls' %>
+<% end %>
 

@@ -1,16 +1,19 @@
 class Lancamento < ActiveRecord::Base
 	validates_presence_of :entrada, :saida, :data, :descricao
-	#validate :valida_hora_do_almoco, :if => "almoco"
+	validate :valida_hora_do_almoco, :if => "almoco"
 	
 	before_save {|l| l.calcular_horas()}
 	
 	def horario_almoco()
 		if almoco
-			valor = ((self.almoco_volta - self.almoco_saida) / 3600) * 100
-			
-    		return 60 * valor / 100
+    		return ((self.almoco_volta - self.almoco_saida) / 3600)
     	end
 		return 0
+	end
+	
+	def horario_almoco_minutos()
+		valor = horario_almoco() * 100
+		return valor * 60 / 100
 	end
     
     def calcular_horas()
