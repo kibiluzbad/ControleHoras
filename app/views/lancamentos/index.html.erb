@@ -15,7 +15,7 @@
 <% @totalGeral = 0 %>
 <% @lancamentos.each do |lancamento| %>
   <% @totalGeral += lancamento.total %>
-  <tr>
+  <tr class="<%= cycle("even", "odd") %>">
     <td class="centralizado"><%=h lancamento.data.strftime('%d/%m/%Y') %></td>
   	<td class="centralizado"><%=h lancamento.entrada.strftime('%H:%M') %></td>
     <td class="centralizado"><%=h lancamento.saida.strftime('%H:%M') %></td>

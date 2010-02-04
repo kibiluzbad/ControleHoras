@@ -139,3 +139,7 @@ th{
 fieldset{
 	border: 1px solid #ccc;
 }
+
+.odd{
+	background-color: #eee;
+}
