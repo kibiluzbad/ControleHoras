@@ -1,6 +1,6 @@
 class LancamentosController < ApplicationController
   before_filter :load_date
-  before_filter :signin_required unless !Rails.env.production?
+  before_filter :signin_required unless ENV['RAILS_ENV'] == 'development'
   
   # GET /lancamentos
   # GET /lancamentos.xml
