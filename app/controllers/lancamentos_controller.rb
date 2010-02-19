@@ -22,10 +22,14 @@ class LancamentosController < ApplicationController
   	 
   	 @lancamentos = Lancamento.all(:order => 'data',:conditions => ['data BETWEEN ? AND ?',from, to] )
   	 
-  	 respond_to do |format|
-      format.html # index.html.erb
-      format.xls  # exporta para xls
-      format.xml  { render :xml => @lancamentos }      
+  	 if request.xhr?
+  	 	render :layout => false
+  	 else
+  	 	respond_to do |format|
+	      format.html # index.html.erb
+	      format.xls  # exporta para xls
+	      format.xml  { render :xml => @lancamentos }
+  	 	end  	 
     end
   end
 

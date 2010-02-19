@@ -9,30 +9,110 @@
   <%= stylesheet_link_tag 'cupertino/jquery-ui-1.7.2.custom' %>
   <%= javascript_include_tag 'jquery-1.3.2.min' %>
   <%= javascript_include_tag 'jquery-ui-1.7.2.custom.min' %>
+  <%= javascript_include_tag 'jquery.gradient' %>
+  <%= javascript_include_tag 'jquery.corner' %>
+  <%= javascript_include_tag 'jquery.blockUI' %>
+<script language="javascript">
+$(document).ready(function (){
+	var meses = <%= "['"+ Date::MONTHNAMES[1..12].join("','") +"']"%>
+	
+	$('#head').gradient({
+		from:      'ffffff',
+		to:        'EDEBEB',
+		direction: 'horizontal'
+	});
+		$('#footer').gradient({
+		from:      '0C4685',
+		to:        '1478E3',
+		direction: 'horizontal'
+	});
+
+
+	$("#content").corner("top");
+	$("#menu").corner("bottom 5px");
+	
+	
+	$("#arrowAno.up").click(function(){
+		AddYear(1);
+
+		var month = meses.indexOf($('#mes').html()) + 1;
+		var year = $('#ano').html();
+
+		LoadData(year,month);
+	});
+	$("#arrowAno.down").click(function(){
+		AddYear(-1);
+
+		var month = meses.indexOf($('#mes').html()) + 1;
+		var year = $('#ano').html();
+
+		LoadData(year,month);
+	});
+	
+	$("#arrowMes.up").click(function(){
+		var index = meses.indexOf($("#mes").html()) + 1;
+		if(index >= meses.length)
+		{
+			index = 0;
+			AddYear(1);
+		}
+		$("#mes").html(meses[index]);
+
+		var month = index + 1;
+		var year = $('#ano').html();
+
+		LoadData(year,month);
+
+	});
+	$("#arrowMes.down").click(function(){
+		var index = meses.indexOf($("#mes").html()) - 1;
+		if(index < 0)
+		{
+			index = meses.length - 1;
+			AddYear(-1);
+		}
+		$("#mes").html(meses[index]);
+
+		var month = index + 1;
+		var year = $('#ano').html();
+
+		LoadData(year,month);
+	});
+	
+	function AddYear(value)
+	{
+		$("#ano").html(parseInt($("#ano").html())+value);
+	}
+
+	function LoadData(year,month)
+	{
+		$.blockUI({ message: null }); 		
+		$("#loader").show();
+		
+		$.get('/lancamentos/' + year + '/' + month, function(data) {
+		  	$("#data").html(data);
+			$("#loader").hide();
+			$.unblockUI({ message: null }); 		
+		});
+	}
+});
+</script>
 </head>
 <body>
-<div id="content">
-   <div id="header">
-   	<label>Controle de Horas</label>
-   	<div id="menu">
-   	<ul>
-   		<li>Home</li>
-   		<li>|</li>
-   		<li><%= link_to "Lançamentos", lancamentos_path %></li>
-   	</div>
-   </div>
-   <div id="line"></div>
-   <div id="sidebar"><div id="sidebar-content">
-   <%= render :partial => "month_picker" %>
-   </div></div>
-   
-   <div id="main"><div id="main-content">
-   <p style="color: green"><%= flash[:notice] %></p>
-   <%= yield %>
-   </div></div>
-   
-   <hr class="cleaner" />
-   
-   </div>
+	<div id="wrapper">
+	<div id="head">
+		<div id="logo"><h1>Controle horas</h1>
+					<div id="menu"><ul><li>Item1</li><li class="separator">|</li><li>Item2</li></ul></div>
+		</div>
+	</div>
+	<div id="content">
+	   <%= render :partial => "month_picker" unless controller.action_name != 'index' %>
+		<div id="data">
+			<%= yield %>
+		</div>
+	</div>
+<div id="loader"><img src="<%= image_path('ajax-loader.gif') %>" /></div>
+	</div>
+		<div id="footer"></div>
 </body>
 </html>

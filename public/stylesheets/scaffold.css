@@ -1,58 +1,97 @@
-body { background-color: #eee; color: #333; }
-
-body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   11px;
-  line-height: 18px;
+html, body{
+	margin:0px;
+	border:none;
+	padding:0px;
+	font-size:11px;
+	color:#333;
+	font-family:verdana;
+	height:98%;
+}
+#wrapper{
+min-height: 95%; height: auto !important; height: 95%;
 }
 
- #content {
-      width: 90%;
-      margin:1em auto;
-      text-align:left;
-      max-width: 1024px;
-      background-color: #fff;
-      }
-#header{
-	height:45px;  
-  	padding:25px;
-  }
-#header label{
-	font-size:22px;
-	font-weight:bolder;
+#head{
+	width:100%;
+	display:block;
+	height:130px;
+	z-index:1;
+	border-bottom:2px solid #ddd;
+	min-width:792px;
+}
+#content{
+	border:1px solid #ddd;
+	padding:20px;
+	width:790px;
+	margin: -40px auto 0 auto;
+	z-index:90;
+	background-color:#fff;
+	position:relative;	
+}
+#logo{
+	width:790px;
+	margin: 0 auto;
+	padding:10px;
 }
 
 #menu{
-	margin-top:-32px;
 	float:right;
+	border: 1px solid #ddd;
+	margin-top:-66px;
+	width:230px;
+	background-color:#F5F5F5;
 }
 
-#menu li{
+#menu ul li{
 	display:inline;
 }
 
-#line{
-	height:5px;
-	background-color:#aaa;
-	width:500px
-	margin: 0 auto;
+.separator{
+	color:#999;
+	font-size:14px;
 }
-#sidebar {
-   float: left;
-   width: 200px;
-   margin:0; padding:0;
+
+.arrows{
+	margin-top:-15px;
+	width:40px;
+	height:50px;
+	float:left;
 }
-#sidebar-content {
-   margin:0; padding: 0.5em 1em;
-   font-size: 100%;
+
+.arrowLabel{
+	float:left;
 }
-#main {
-   margin:0 0 0 200px; padding:0;
+.arrows img{
+	float:left;	
 }
-#main-content {
-   margin:0; padding: 0.5em 1em;
-   font-size: 100%;
-   border-left:1px dotted #ccc;
+.up{
+	cursor:pointer;
+	width:40px;
+	height:25px;
+}
+.down{
+	cursor:pointer;
+	width:40px;
+	height:25px;
+
+}
+
+span#ano{
+	border: 1px solid #ddd;
+	padding: 5px;
+	color:#999;
+}
+span#mes{
+	border: 1px solid #ddd;
+	padding: 5px;
+	color:#999;
+}
+
+#footer{
+	border-top:2px solid #aaa;
+	width:100%;
+	min-width:792px;
+	height:80px;
 }
 hr.cleaner {
    clear:both;
@@ -113,6 +152,7 @@ a:hover {
 
 table{
 	border: 1px #ddd solid;
+	width:100%;
 }
 
 th{
@@ -142,4 +182,13 @@ fieldset{
 
 .odd{
 	background-color: #eee;
+}
+#loader{
+	display:none;
+	position: absolute;
+	margin: 0 auto;
+	top: 50%;
+	left: 50%;
+	width: 32px;
+	height: 32px;
 }
