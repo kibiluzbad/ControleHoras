@@ -102,12 +102,13 @@ $(document).ready(function (){
 	<div id="wrapper">
 	<div id="head">
 		<div id="logo"><h1>Controle horas</h1>
-					<div id="menu"><ul><li>Item1</li><li class="separator">|</li><li>Item2</li></ul></div>
+					<div id="menu"><ul><li><a href="/">home</a></li><li class="separator">|</li><li><a href="/sessions/destroy">logoff</a></li></ul></div>
 		</div>
 	</div>
 	<div id="content">
 	   <%= render :partial => "month_picker" unless controller.action_name != 'index' %>
-		<div id="data">
+<p style="color: green"><%= flash[:notice] %></p>		
+<div id="data">
 			<%= yield %>
 		</div>
 	</div>

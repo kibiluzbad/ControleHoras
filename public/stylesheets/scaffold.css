@@ -61,6 +61,11 @@ min-height: 95%; height: auto !important; height: 95%;
 	margin-top:-66px;
 	width:230px;
 	background-color:#F5F5F5;
+	text-align:right;	
+}
+
+#menu ul{
+	padding: 0 20px 0 20px;
 }
 
 #menu ul li{
@@ -70,6 +75,7 @@ min-height: 95%; height: auto !important; height: 95%;
 .separator{
 	color:#999;
 	font-size:14px;
+	padding:0 5px 0 5px;
 }
 
 .arrows{
