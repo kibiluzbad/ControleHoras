@@ -25,9 +25,9 @@
     <td class="numero"><%=h lancamento.total %></td>
 	<% if !lancamento.pago %>
 	<% @pago = false %>
-    <td><%= link_to "<img class='icon' alt='Visualizar' src='" + image_path("glossy_3d_blue_orbs2_051.png") + "' />", lancamento %></td>
-    <td><%= link_to "<img class='icon' alt='Editar' src='" + image_path("glossy_3d_blue_orbs2_083.png") + "' />", edit_lancamento_path(lancamento) %></td>
-    <td><%= link_to "<img class='icon' alt='Excluir' src='" + image_path("glossy_3d_blue_delete.png") + "' />", lancamento, :confirm => 'Deseja realmente excluir esse item?', :method => :delete %></td>
+    <td><%= link_to "<img class='icon' alt='Visualizar' src='" + image_path("view.png") + "' />", lancamento %></td>
+    <td><%= link_to "<img class='icon' alt='Editar' src='" + image_path("edit.png") + "' />", edit_lancamento_path(lancamento) %></td>
+    <td><%= link_to "<img class='icon' alt='Excluir' src='" + image_path("delete.png") + "' />", lancamento, :confirm => 'Deseja realmente excluir esse item?', :method => :delete %></td>
 	<% else %>
 	<% @pago = true %>
 	<td colspan="3">&nbsp;</td>
