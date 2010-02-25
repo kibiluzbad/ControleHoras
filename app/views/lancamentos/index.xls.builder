@@ -27,9 +27,9 @@ xml.Workbook({
         xml.Row do
             xml.Cell { xml.Data lancamento.data.strftime('%d/%m/%Y'), 'ss:Type' => 'String' }
             xml.Cell { xml.Data lancamento.entrada.strftime('%H:%M'), 'ss:Type' => 'String' }
-            xml.Cell { xml.Data lancamento.saida.strftime('%H:%M'), 'ss:Type' => 'String' }
-			xml.Cell { xml.Data lancamento.almoco_saida.strftime('%H:%M'), 'ss:Type' => 'String' }
-            xml.Cell { xml.Data lancamento.almoco_volta.strftime('%H:%M'), 'ss:Type' => 'String' }
+xml.Cell { xml.Data lancamento.almoco_saida.strftime('%H:%M'), 'ss:Type' => 'String' }
+            xml.Cell { xml.Data lancamento.almoco_volta.strftime('%H:%M'), 'ss:Type' => 'String' }         
+   xml.Cell { xml.Data lancamento.saida.strftime('%H:%M'), 'ss:Type' => 'String' }
             xml.Cell { xml.Data lancamento.total , 'ss:Type' => 'String' }
             xml.Cell { xml.Data lancamento.descricao , 'ss:Type' => 'String' }
         end
