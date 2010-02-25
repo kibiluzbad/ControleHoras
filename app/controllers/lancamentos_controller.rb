@@ -22,7 +22,7 @@ class LancamentosController < ApplicationController
      from = requested_date
   	 to =  (requested_date >> 1) - 1
   	 
-  	 @lancamentos = Lancamento.all(:order => 'data',:conditions => ['data BETWEEN ? AND ?',from, to] )
+  	 @lancamentos = Lancamento.all(:order => 'data',:conditions => ['data BETWEEN ? AND ? AND User_id = ?',from, to,current_user.id] )
   	 
   	 if request.xhr?
   	 	render :layout => false
