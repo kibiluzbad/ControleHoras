@@ -1,0 +1,18 @@
+%h2
+	%span.arrowLabel
+		Horas lançadas - 
+		%span#mes= Date.new(2000,@month,1).strftime('%B')
+	.arrows
+		%img#arrowMes.up{:src=>"#{image_path('arrow-up.png')}"}
+		%img#arrowMes.down{:src=>"#{image_path('arrow-down.png')}"}
+	%span.arrowLabel 
+		/ 
+		%span#ano= @year
+	.arrows
+		%img#arrowAno.up{:src=>"#{image_path('arrow-up.png')}"}
+		%img#arrowAno.down{:src=>"#{image_path('arrow-down.png')}"}
+%br
+%br
+%br
+%br
+%br

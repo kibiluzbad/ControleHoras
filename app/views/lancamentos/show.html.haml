@@ -1,0 +1,32 @@
+%fieldset
+	%legend Principal
+	%p
+		%strong Data:
+		= @lancamento.data.strftime('%d/%m/%Y')
+	%p
+		%strong Entrada:
+		= @lancamento.entrada.strftime('%H:%M')
+	%p
+		%strong Saida:
+		= @lancamento.saida.strftime('%H:%M')
+	%p
+		%strong Descricao:
+		= @lancamento.descricao	
+- if @lancamento.almoco
+	%fieldset
+		%legend Almoço
+		%p
+			%strong Saida:
+			= @lancamento.almoco_saida.strftime('%H:%M')
+		%p
+			%strong Volta:
+			= @lancamento.almoco_volta.strftime('%H:%M')
+%fieldset
+	%legend Horas
+	%p
+		%strong Horas:
+		= @lancamento.horas
+	%p
+		%strong Horas extras:
+		= @lancamento.horas_extras || '-'
+= link_to 'Voltar', lancamentos_path

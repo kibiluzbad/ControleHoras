@@ -1,7 +1,6 @@
-# Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
-	def to_sim_nao
-		self ? "Sim" : "Não"
+ def to_sim_nao
+		self ? "Sim" : "Nao"
 	end
 end
 

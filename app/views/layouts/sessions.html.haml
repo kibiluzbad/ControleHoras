@@ -1,0 +1,34 @@
+!!!
+%html{:xmlns=>"http://www.w3.org/1999/xhtml", "xml:lang"=>"en", :lang=>"en"}
+	%head
+		%meta{"http-equiv"=>"content-type", :content="text/html;charset=UTF-8"
+		%title Controle horas
+		= stylesheet_link_tag 'scaffold', 'openid','cupertino/jquery-ui-1.7.2.custom'
+		= javascript_include_tag 'jquery-1.3.2.min','jquery-ui-1.7.2.custom.min','jquery.gradient','jquery.corner','jquery.blockUI','openid-jquery'
+		:javascript
+			$(document).ready(function (){
+				var meses = #{Date::MONTHNAMES[1..12]}
+	
+				$('#head_public').gradient({
+					from:      'ffffff',
+					to:        'EDEBEB',
+					direction: 'horizontal'
+				});
+					$('#footer_public').gradient({
+					from:      '0C4685',
+					to:        '1478E3',
+					direction: 'horizontal'
+				});
+
+				openid.init('openid_identifier');
+			});
+	%body
+		#wrapper
+			#head_public
+				#logo
+					%h1	Controle horas
+			#message
+				%p{:style=>"color: green"
+					= flash[:notice]
+				= yield
+			#footer_public

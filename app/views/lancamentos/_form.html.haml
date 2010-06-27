@@ -1,0 +1,48 @@
+﻿- form_for(@lancamento) do |f|
+	- if(0 < @lancamento.errors.count)
+		%div.ui-state-highlight.ui-corner-all{:style=>"margin-top: 20px; padding: 0 .7em;"} 
+			%p
+				%span.ui-icon.ui-icon-info{:style=>"float: left; margin-right: .3em;"}
+				%ul
+					- @lancamento.errors.full_messages.each do |msg|
+						%li= msg
+	%p
+		= f.label :data
+		%br
+		= f.date_select :data, :default => Date.new(@year,@month,Time.now.day)
+	%p
+		= f.label :entrada
+		%br
+		= f.datetime_select :entrada, :discard_day => true,:discard_month => true,:discard_year => true, :default => Time.now
+	%p
+		= f.label :saida
+		%br
+		= f.datetime_select :saida,:discard_day => true, :discard_month => true, :discard_year => true, :default => Time.now
+	%p
+		= f.label :descricao
+		%br
+		= f.text_field :descricao
+	%p
+		= f.label :com_almoco
+		%br
+		= f.check_box :almoco, { :class => "com_almoco" }
+	#almoco
+		%p
+			= f.label :almoco_saida, "Saída" 
+			%br
+			= f.datetime_select :almoco_saida,:discard_day => true,:discard_month => true, :discard_year => true,:default => Time.now
+		%p
+			= f.label :almoco, "Volta"
+			%br
+			= f.datetime_select :almoco_volta,:discard_day => true,:discard_month => true, :discard_year => true,:default => Time.now
+	%p
+		= f.label :horas
+		%br
+		= f.text_field :horas_extras
+	%p
+		= f.label :horas_extras
+		%br
+		= f.text_field :horas_extras
+	%p
+		= f.submit button_label
+= link_to 'Voltar', '/lancamentos/' + @year.to_s + '/' + @month.to_s

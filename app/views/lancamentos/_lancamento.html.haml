@@ -1,0 +1,18 @@
+- @totalGeral += lancamento.total
+%tr{:class=>cycle("even", "odd")}
+	%td.centralizado= lancamento.data.strftime('%d/%m/%Y')
+	%td.centralizado= lancamento.entrada.strftime('%H:%M')
+	%td.centralizado= lancamento.saida.strftime('%H:%M')
+	%td.centralizado= lancamento.almoco ? lancamento.horario_almoco_minutos : "-"
+	%td.texto= lancamento.descricao
+	%td.numero= lancamento.horas
+	%td.numero= lancamento.horas_extras || '-'
+	%td.numero= lancamento.total
+	- if !lancamento.pago
+		- @pago = false
+		%td= link_to image_tag("view.png", :border=>0), lancamento
+		%td= link_to image_tag("edit.png", :border=>0), edit_lancamento_path(lancamento)
+		%td= link_to image_tag("delete.png", :border=>0), lancamento, :confirm => 'Deseja realmente excluir esse item?', :method => :delete
+	- else
+		- @pago = true
+		%td{:colspan=>"3"}

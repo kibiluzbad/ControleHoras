@@ -1,13 +1,14 @@
 class LancamentosController < ApplicationController
   before_filter :load_date
-  if(ENV['RAILS_ENV'] == 'production')	
-  	before_filter :signin_required
-  end
   
   # GET /lancamentos
   # GET /lancamentos.xml
   def index
-  
+ 
+	 if(ENV['RAILS_ENV'] == 'test')
+		current_user = User.first
+	 end
+ 
 	 if(params[:date])
 		@year = Integer(params[:date][:year])
 		@month = Integer(params[:date][:month])
@@ -22,7 +23,7 @@ class LancamentosController < ApplicationController
      from = requested_date
   	 to =  (requested_date >> 1) - 1
   	 
-  	 @lancamentos = Lancamento.all(:order => 'data',:conditions => ['data BETWEEN ? AND ? AND User_id = ?',from, to,current_user.id] )
+  	 @lancamentos = Lancamento.all(:order => 'data',:conditions => ['data BETWEEN ? AND ? AND User_id = ?',from, to, !current_user.nil? ? current_user.id : 1])
   	 
   	 if request.xhr?
   	 	render :layout => false

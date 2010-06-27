@@ -3,15 +3,3 @@
 
 en:
   hello: "Hello world"
-  activerecord:
-    errors:
-      format:
-        full_message: {{message}}
-      messages:
-        blank:        "deve ser preenchido"
-      template:
-        header:
-          one:   "Existe um erro proibindo o salvamento de {{model}}."
-          other: "Existem {{count}} erros proibindo o salvamento de {{model}}."
-        body: "Os seguintes campos apresentam problemas:"
-      
