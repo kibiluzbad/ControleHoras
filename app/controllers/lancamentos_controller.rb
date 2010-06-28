@@ -5,10 +5,6 @@ class LancamentosController < ApplicationController
   # GET /lancamentos.xml
   def index
  
-	 if(ENV['RAILS_ENV'] == 'test')
-		current_user = User.first
-	 end
- 
 	 if(params[:date])
 		@year = Integer(params[:date][:year])
 		@month = Integer(params[:date][:month])
@@ -23,7 +19,7 @@ class LancamentosController < ApplicationController
      from = requested_date
   	 to =  (requested_date >> 1) - 1
   	 
-  	 @lancamentos = Lancamento.all(:order => 'data',:conditions => ['data BETWEEN ? AND ? AND User_id = ?',from, to, !current_user.nil? ? current_user.id : 1])
+  	 @lancamentos = Lancamento.all(:order => 'data',:data => {'$gte' => Time.utc(from.year,from.month,from.day) , '$lte' => Time.utc(to.year,to.month,to.day)})
   	 
   	 if request.xhr?
   	 	render :layout => false
@@ -66,7 +62,12 @@ class LancamentosController < ApplicationController
   # POST /lancamentos
   # POST /lancamentos.xml
   def create
-    @lancamento = Lancamento.new(params[:lancamento])
+		#TODO: Refatorar carregamento de parametros da tela!
+		saida_almoco = params[:lancamento][:almoco] ? "#{params[:lancamento]['almoco_saida(4i)']}:#{params[:lancamento]['almoco_saida(5i)']}" : nil
+		volta_almoco = params[:lancamento][:almoco] ? "#{params[:lancamento]['almoco_volta(4i)']}:#{params[:lancamento]['almoco_volta(5i)']}" : nil
+
+
+    @lancamento = Lancamento.new({:descricao=>params[:lancamento][:descricao],:data=>Date.new(params[:lancamento]["data(1i)"].to_i,params[:lancamento]["data(2i)"].to_i,params[:lancamento]["data(3i)"].to_i),:entrada=>"#{params[:lancamento]['entrada(4i)']}:#{params[:lancamento]['entrada(5i)']}",:saida=>"#{params[:lancamento]['saida(4i)']}:#{params[:lancamento]['saida(5i)']}",:almoco=>params[:lancamento][:almoco],:almoco_saida => saida_almoco, :almoco_volta => volta_almoco})
 
     respond_to do |format|
       if @lancamento.save
@@ -84,9 +85,16 @@ class LancamentosController < ApplicationController
   # PUT /lancamentos/1.xml
   def update
     @lancamento = Lancamento.find(params[:id])
+		#TODO: Refatorar carregamento de parametros da tela!
+		saida_almoco = params[:lancamento][:almoco] ? "#{params[:lancamento]['almoco_saida(4i)']}:#{params[:lancamento]['almoco_saida(5i)']}" : nil
+		volta_almoco = params[:lancamento][:almoco] ? "#{params[:lancamento]['almoco_volta(4i)']}:#{params[:lancamento]['almoco_volta(5i)']}" : nil
 
+		if(params[:lancamento][:almoco])
+		
+		end
     respond_to do |format|
-      if @lancamento.update_attributes(params[:lancamento])
+      if @lancamento.update_attributes({:descricao=>params[:lancamento][:descricao],:data=>Date.new(params[:lancamento]["data(1i)"].to_i,params[:lancamento]["data(2i)"].to_i,params[:lancamento]["data(3i)"].to_i),:entrada=>"#{params[:lancamento]['entrada(4i)']}:#{params[:lancamento]['entrada(5i)']}",:saida=>"#{params[:lancamento]['saida(4i)']}:#{params[:lancamento]['saida(5i)']}",:almoco=>params[:lancamento][:almoco],:almoco_saida => saida_almoco, :almoco_volta => volta_almoco})
+
         flash[:notice] = 'Lancamento was successfully updated.'
         format.html { redirect_to(@lancamento) }
         format.xml  { head :ok }
@@ -116,15 +124,15 @@ class LancamentosController < ApplicationController
 	requested_date = Date.new(@year, @month, 1)
      from = requested_date
   	 to =  (requested_date >> 1) - 1
-	
-	Lancamento.all(:order => 'data',:conditions => ['data BETWEEN ? AND ?',from, to] ).each do |lancamento|
+#TODO: Refatorar para efetuar uma atualização em batch.
+	Lancamento.all(:order => 'data',:data => {'$gte' => Time.utc(from.year,from.month,from.day) , '$lte' => Time.utc(to.year,to.month,to.day)} ).each do |lancamento|
 		lancamento.pago = true
 		lancamento.save
 	end
 	
 	flash[:notice] = "Pagamento do mes recebido."
-	
-	redirect_to :action => "index"
+
+	redirect_to "/lancamentos/#{@year}/#{@month}"
   end
   
   private

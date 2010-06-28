@@ -2,9 +2,9 @@ html, body{
 	margin:0px;
 	border:none;
 	padding:0px;
-	font-size:11px;
+	font-size:12px;
 	color:#333;
-	font-family:verdana;
+	font-family:helvetica, "helvetica neue", verdana, arial;
 	height:98%;
 }
 #wrapper{

@@ -14,7 +14,7 @@
 		= render :partial => "lancamento", :collection => @lancamentos
 		%tr{:class=>"footer"}
 			%th.texto{:colspan=>"7"} Total Geral
-			%th.numero= @totalGeral
+			%th.numero= Lancamento.human_hour(@totalGeral)
 			%th{:colspan=>"3"}
 - else
 	%div{:class=>"ui-state-highlight ui-corner-all",:style=>"margin-top: 20px; padding: 0 .7em;"}

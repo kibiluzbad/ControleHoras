@@ -3,7 +3,7 @@ Controlehoras::Application.routes.draw do |map|
   # first created -> highest priority.
 	root :to => "lancamentos#index"	
 	match '/lancamentos/:action/:year/:month' => 'lancamentos', :constraints => {:action => /pagamento|new/, :month => /[0-9]{1,2}/, :year => /[0-9]{4,}/}  
-  match '/lancamentos/:year/:month(.:format)' => 'lancamentos#index', :constraints => {:month => /[0-9]{1,2}/, :year => /[0-9]{4,}/}
+  match '/lancamentos/:year/:month(.:format)' => 'lancamentos#index', :constraints => {:month => /[0-9]{1,2}/, :year => /[0-9]{4,}/}, :as => :lancamentos_lista
   resources :lancamentos
 
   # Sample of regular route:
@@ -58,5 +58,5 @@ Controlehoras::Application.routes.draw do |map|
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  match ':controller(/:action(/:id(.:format)))'
+  #match ':controller(/:action(/:id(.:format)))'
 end

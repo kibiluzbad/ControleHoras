@@ -1,7 +1,22 @@
-class Lancamento < ActiveRecord::Base
+class Lancamento
+	include MongoMapper::Document
+	
+	key :entrada, Time
+  key :saida, Time
+  key :descricao, String
+  key :horas, Float
+  key :horas_extras, Float
+  key :data, Date
+	key :total, Float
+	key :almoco, Boolean
+	key :almoco_saida, Time
+	key :almoco_volta, Time
+	key :pago, Boolean
+
 	validates_presence_of :entrada, :saida, :data, :descricao
 	validate :valida_hora_do_almoco, :if => "almoco"
-	belongs_to :user
+	#TODO: Habilitar relacionamento com usuários	
+	#belongs_to :user
 	
 	before_save {|l| l.calcular_horas()}
 	
@@ -19,7 +34,7 @@ class Lancamento < ActiveRecord::Base
 	
 	def horario_almoco_minutos()
 		valor = horario_almoco() * 3600
-		return to_human_hour(valor)
+		Lancamento.to_human_hour(valor)
 	end
     
     def calcular_horas()
@@ -34,6 +49,18 @@ class Lancamento < ActiveRecord::Base
 			self.horas = 8
 	    end
 	end
+
+	def total_human_hour()
+		Lancamento.to_human_hour(self.total * 3600)
+	end
+
+	def extra_human_hour()
+		Lancamento.to_human_hour(self.horas_extras * 3600) unless self.horas_extras.nil?
+	end
+
+	def self.human_hour(value)
+		to_human_hour(value * 3600)
+	end
 	
 	private
 	def valida_hora_do_almoco()
@@ -47,7 +74,7 @@ class Lancamento < ActiveRecord::Base
 		end
 	end
 
-	def to_human_hour(value)
-		return [(value/3600).to_i, (value/60 % 60).to_i].map{|t| t.to_s.rjust(2, '0')}.join(':')
+	def self.to_human_hour(value)
+		[(value/3600).to_i, (value/60 % 60).to_i].map{|t| t.to_s.rjust(2, '0')}.join(':')
 	end
 end

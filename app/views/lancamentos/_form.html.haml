@@ -1,4 +1,4 @@
-﻿- form_for(@lancamento) do |f|
+﻿= form_for(@lancamento) do |f|
 	- if(0 < @lancamento.errors.count)
 		%div.ui-state-highlight.ui-corner-all{:style=>"margin-top: 20px; padding: 0 .7em;"} 
 			%p
