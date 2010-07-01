@@ -10,6 +10,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'ruby-openid', '2.1.7'
 gem "haml", '3.0.13'
 gem "mongo_mapper", '0.8.2'
+gem "rails3-generators", :group => :development
 
 # Use unicorn as the web server
 # gem 'unicorn'
