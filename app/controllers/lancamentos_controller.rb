@@ -66,7 +66,7 @@ class LancamentosController < ApplicationController
   # POST /lancamentos.xml
   def create
     @lancamento = Lancamento.new(params[:lancamento])
-
+    @lancamento.user = current_user unless ENV['RAILS_ENV'] != 'production'
     respond_to do |format|
       if @lancamento.save
         flash[:notice] = 'Lancamento was successfully created.'
