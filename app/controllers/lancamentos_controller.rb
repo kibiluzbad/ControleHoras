@@ -2,12 +2,14 @@ class LancamentosController < ApplicationController
   before_filter :load_date
   if(ENV['RAILS_ENV'] == 'production')	
   	before_filter :signin_required
+  else
+    before_filter :set_user
   end
   
   # GET /lancamentos
   # GET /lancamentos.xml
   def index
-  
+
 	 if(params[:date])
 		@year = Integer(params[:date][:year])
 		@month = Integer(params[:date][:month])
@@ -22,7 +24,7 @@ class LancamentosController < ApplicationController
      from = requested_date
   	 to =  (requested_date >> 1) - 1
   	 
-  	 @lancamentos = Lancamento.all(:order => 'data',:conditions => ['data BETWEEN ? AND ? AND User_id = ?',from, to,current_user.id] )
+  	 @lancamentos = Lancamento.all(:order => 'data',:conditions => ['data BETWEEN ? AND ? AND User_id = ?',from, to,@current_user.id] )
   	 
   	 if request.xhr?
   	 	render :layout => false
@@ -38,7 +40,7 @@ class LancamentosController < ApplicationController
   # GET /lancamentos/1
   # GET /lancamentos/1.xml
   def show
-    @lancamento = Lancamento.find(params[:id])
+        @lancamento = Lancamento.first(:conditions => ['id = ? and user_id = ?',params[:id],@current_user.id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -59,14 +61,15 @@ class LancamentosController < ApplicationController
 
   # GET /lancamentos/1/edit
   def edit
-    @lancamento = Lancamento.find(params[:id])
+    @lancamento = Lancamento.first(:conditions => ['id = ? and user_id = ?',params[:id],@current_user.id])
   end
 
   # POST /lancamentos
   # POST /lancamentos.xml
   def create
-    @lancamento = Lancamento.new(params[:lancamento])
-    @lancamento.user = current_user unless ENV['RAILS_ENV'] != 'production'
+    @lancamento = Lancamento.new(params[:lancamento])    
+    @lancamento.user = @current_user
+    
     respond_to do |format|
       if @lancamento.save
         flash[:notice] = 'Lancamento was successfully created.'
@@ -82,7 +85,7 @@ class LancamentosController < ApplicationController
   # PUT /lancamentos/1
   # PUT /lancamentos/1.xml
   def update
-    @lancamento = Lancamento.find(params[:id])
+    @lancamento = Lancamento.first(:conditions => ['id = ? and user_id = ?',params[:id],@current_user.id])
 
     respond_to do |format|
       if @lancamento.update_attributes(params[:lancamento])
@@ -99,7 +102,7 @@ class LancamentosController < ApplicationController
   # DELETE /lancamentos/1
   # DELETE /lancamentos/1.xml
   def destroy
-    @lancamento = Lancamento.find(params[:id])
+    @lancamento = Lancamento.first(:conditions => ['id = ? and user_id = ?',params[:id],@current_user.id])
     @lancamento.destroy
 
     respond_to do |format|
@@ -116,7 +119,7 @@ class LancamentosController < ApplicationController
      from = requested_date
   	 to =  (requested_date >> 1) - 1
 	
-	Lancamento.all(:order => 'data',:conditions => ['data BETWEEN ? AND ?',from, to] ).each do |lancamento|
+	Lancamento.all(:order => 'data',:conditions => ['data BETWEEN ? AND ? and user_id = ?',from, to,@current_user.id] ).each do |lancamento|
 		lancamento.pago = true
 		lancamento.save
 	end
@@ -138,6 +141,10 @@ class LancamentosController < ApplicationController
 	  @year = params[:year].to_i
 	  @month = params[:month].to_i
    end
+  end
+  
+  def set_user
+      @current_user = User.first
   end
 end
 

@@ -12,20 +12,20 @@
 ActiveRecord::Schema.define(:version => 20100225214319) do
 
   create_table "lancamentos", :force => true do |t|
-    t.time     "entrada"
-    t.time     "saida"
-    t.string   "descricao"
-    t.decimal  "horas",        :precision => 10, :scale => 2
-    t.decimal  "horas_extras", :precision => 10, :scale => 2
-    t.date     "data"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.decimal  "total",        :precision => 10, :scale => 2
-    t.boolean  "almoco"
-    t.time     "almoco_saida"
-    t.time     "almoco_volta"
-    t.boolean  "pago"
-    t.integer  "user_id"
+    t.time      "entrada"
+    t.time      "saida"
+    t.string    "descricao"
+    t.decimal   "horas"
+    t.decimal   "horas_extras"
+    t.date      "data"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.decimal   "total"
+    t.boolean   "almoco"
+    t.time      "almoco_saida"
+    t.time      "almoco_volta"
+    t.boolean   "pago"
+    t.integer   "user_id"
   end
 
   create_table "open_id_authentication_associations", :force => true do |t|
@@ -44,12 +44,12 @@ ActiveRecord::Schema.define(:version => 20100225214319) do
   end
 
   create_table "users", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "identity_url"
-    t.string   "nickname"
-    t.string   "email"
-    t.string   "fullname"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "identity_url"
+    t.string    "nickname"
+    t.string    "email"
+    t.string    "fullname"
   end
 
 end
