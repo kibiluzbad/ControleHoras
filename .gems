@@ -1,2 +1,3 @@
+rails --version '>=2.3.8'
 fastercsv --version '>=1.5.0'
 ruby-openid --version '>=2.1.7'
